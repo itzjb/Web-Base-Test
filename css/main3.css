@@ -207,4 +207,5 @@ nav ul li a {
     white-space: nowrap; /* 헤더 텍스트가 줄 바꿈되지 않도록 강제 */
     overflow: hidden;
     text-overflow: ellipsis;
+    text-size: 10px;
 }
