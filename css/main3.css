@@ -35,6 +35,7 @@ nav ul {
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     justify-content: space-around;
+    margin: 0px;
 }
 nav ul li {
     padding: 15px 20px;
