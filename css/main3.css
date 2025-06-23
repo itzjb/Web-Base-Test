@@ -7,7 +7,7 @@
     text-decoration: none;
 }
 
-/* body: 웹페이지 전체의 기본 스타일 (가독성 핵심) */
+/* 웹페이지 전체 기본 스타일 */
 body {
     line-height: 1.6;      /* 줄 간격 설정 */
     color: #333;           /* 기본 텍스트 색상 (진한 회색) */
@@ -85,17 +85,6 @@ nav ul {
     justify-content: space-around; /* 메뉴 항목을 균등하게 분배 */
 }
 
-nav ul li {
-    padding: 18px 25px; /* 패딩 증가 */
-    cursor: pointer; /* 커서 포인터는 유지합니다 */
-    font-weight: bold;
-    color: black;
-}
-
-nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다면) */
-    text-decoration: none; /* 링크 밑줄 제거 */
-    color: inherit; /* 부모 요소의 색상 상속 */
-}
 /* section 내부 콘텐츠의 가독성 향상 스타일 */
 section {
     background-color: #fcfcfc; /* 흰색에 가까운 배경색으로 눈의 피로 감소 */
@@ -105,7 +94,7 @@ section {
     box-shadow: 0 0 15px rgba(0,0,0,0.08); /* 은은한 그림자로 책 느낌 */
     border-radius: 8px; /* 부드러운 모서리 */
 }
-
+/* 본제목 스타일 */
 section h1 {
     font-family: 'Nanum Gothic', sans-serif; /* 고딕체 계열로 제목 강조 */
     font-size: 2.2em; /* 큰 제목 크기 */
@@ -117,7 +106,7 @@ section h1 {
     line-height: 1.3;
     word-break: keep-all; /* 단어 단위 줄바꿈 */
 }
-
+/* 장 제목 스타일 */
 section h2 {
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.5em; /* 장 제목 크기 */
@@ -129,7 +118,7 @@ section h2 {
     border-left: 4px solid #d4a974; /* 포인트 라인 */
     word-break: keep-all;
 }
-
+/* 문단 스타일 */
 section p {
     line-height: 1.8; /* 줄 간격 넓혀 읽기 편하게 */
     color: #2c2c2c;
@@ -144,18 +133,18 @@ section strong {
     font-weight: bold;
 }
 
-/* 문단 시작 시 들여쓰기 초기화 (제목 바로 다음 문단 등) */
+/* 문단 시작 들여쓰기 초기화 */
 section h2 + p {
     text-indent: 0;
 }
 
-/* HR 태그 스타일 (구분선) */
+/* HR (구분선) */
 section hr {
     border: none;
     border-top: 1px solid #eee;
     margin: 50px 0;
 }
-
+/* --- 푸터 --- */
 .footer {
     background-color: #4d6d83; /* 배경색 */
     color: white; /* 텍스트 색상 */
