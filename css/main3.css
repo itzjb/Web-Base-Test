@@ -3,13 +3,13 @@
 }
 /* --- 상단 헤더 --- */
 header {
-    font-family: sans-serif;
     background-color: #2d5b76;
     color: white;
     padding: 18px 30px; /* 패딩 증가 */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: sans-serif;
 }
 
 header h1 {
