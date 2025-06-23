@@ -1,8 +1,6 @@
-* { 
-    box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; 
+* {
     text-decoration: none;
 }
-
 
 header {
     background-color: #2d5b76;
@@ -12,10 +10,22 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-header a h1 { 
+header h1 {
     font-size: 30px; 
-    text-decoration: none;
     color: white;
+}
+
+.footer {
+    background-color: #4d6d83;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+body {
+    font-family: 'Nanum Myeongjo', serif; /* 기본 본문 폰트 */
+    margin: 0px;
 }
 
 nav ul {
@@ -26,7 +36,7 @@ nav ul {
     border-bottom: 1px solid #ccc;
     justify-content: space-around;
 }
-nav ul a li {
+nav ul li {
     padding: 15px 20px;
     cursor: pointer;
     font-weight: bold;
@@ -34,10 +44,62 @@ nav ul a li {
     color: black;
 }
 
-.footer {
-    background-color: #4d6d83;
-    color: white;
+/* section 내부 콘텐츠의 가독성 향상 스타일 */
+section {
+    background-color: #fcfcfc; /* 흰색에 가까운 배경색으로 눈의 피로 감소 */
+    padding: 40px 50px; /* 섹션 내부 여백 조정 */
+    margin: 40px auto; /* 섹션 자체를 가운데 정렬 및 상하 여백 */
+    max-width: 850px; /* 본문 최대 너비 설정 (원하는 만큼 조정 가능) */
+    box-shadow: 0 0 15px rgba(0,0,0,0.08); /* 은은한 그림자로 책 느낌 */
+    border-radius: 8px; /* 부드러운 모서리 */
+}
+
+section h1 {
+    font-family: 'Nanum Gothic', sans-serif; /* 고딕체 계열로 제목 강조 */
+    font-size: 2.2em; /* 큰 제목 크기 */
+    font-weight: bold;
+    color: #1a1a1a;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
+    margin-top: 20px; /* 상단 여백 조절 */
+    margin-bottom: 40px; /* 하단 여백 조절 */
+    line-height: 1.3;
+    word-break: keep-all; /* 단어 단위 줄바꿈 */
+}
+
+section h2 {
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.5em; /* 장 제목 크기 */
+    font-weight: bold;
+    color: #3a3a3a;
+    margin-top: 40px; /* 상단 여백 조절 */
+    margin-bottom: 25px; /* 하단 여백 조절 */
+    padding-left: 10px;
+    border-left: 4px solid #d4a974; /* 포인트 라인 */
+    word-break: keep-all;
+}
+
+section p {
+    line-height: 1.8; /* 줄 간격 넓혀 읽기 편하게 */
+    color: #2c2c2c;
+    margin-bottom: 1.4em; /* 단락 하단 여백 */
+    text-align: justify; /* 양쪽 정렬 */
+    text-indent: 1.5em; /* 첫 줄 들여쓰기 */
+    word-break: keep-all;
+}
+
+section strong {
+    color: #a82e2e; /* 붉은 계열로 강조 */
+    font-weight: bold;
+}
+
+/* 문단 시작 시 들여쓰기 초기화 (제목 바로 다음 문단 등) */
+section h2 + p {
+    text-indent: 0;
+}
+
+/* HR 태그 스타일 (구분선) */
+section hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 50px 0;
 }
