@@ -1,6 +1,41 @@
+/* 전역 기본 설정: 모든 요소에 일괄 적용 */
 * {
+    box-sizing: border-box; /* 패딩과 보더가 너비/높이에 포함되도록 설정 */
+    margin: 0;             /* 모든 요소의 외부 여백 초기화 */
+    padding: 0;            /* 모든 요소의 내부 여백 초기화 */
+    font-family: 'Arial', 'Helvetica Neue', 'Malgun Gothic', sans-serif; /* 기본 폰트 지정: 영문 우선, 한글 대체 */
     text-decoration: none;
 }
+
+/* body: 웹페이지 전체의 기본 스타일 (가독성 핵심) */
+body {
+    line-height: 1.6;      /* 줄 간격 설정 */
+    color: #333;           /* 기본 텍스트 색상 (진한 회색) */
+    background-color: #f8f8f8; /* 페이지 전체의 연한 배경색 */
+    font-size: 16px;       /* 기본 폰트 크기 설정 */
+}
+
+/* 제목 태그들의 기본 스타일 */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4; /* 제목 줄 간격 */
+    margin-bottom: 0.8em; /* 제목 아래 여백 */
+    color: #2d5b76; /* 제목 색상 통일 (헤더 h1은 제외) */
+}
+
+p {
+    margin-bottom: 1em; /* 문단 아래 여백 */
+}
+
+ul {
+    list-style-type: none; /* 기본 리스트 마커 제거 */
+    padding-left: 0;       /* 리스트 항목 들여쓰기 제거 (필요시 하위 선택자에서 지정) */
+    margin-bottom: 1em;    /* 리스트 아래 여백 */
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+
 /* --- 상단 헤더 --- */
 header {
     background-color: #2d5b76;
@@ -9,25 +44,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: sans-serif;
 }
 
 header h1 {
-    font-family: sans-serif;
     font-size: 30px; /* 헤더 제목 폰트 크기 */
     color: white; /* 헤더 제목 색상 */
     margin-bottom: 0; /* 헤더 h1은 자체적으로 여백 없앰 */
 }
 
 .top-buttons {
-    font-family: sans-serif;
     display: flex;
     gap: 15px; /* 버튼 간격 증가 */
     align-items: center; /* 버튼 정렬 */
 }
 
 .top-buttons button {
-    font-family: sans-serif;
     background: white;
     color: #2d5b76;
     border: 1px solid #ccc;
@@ -35,51 +66,36 @@ header h1 {
     border-radius: 5px;
     cursor: pointer; /* 커서 포인터는 유지합니다 (클릭 가능한 요소임을 시각적으로 보여줌) */
     font-size: 15px;
-    /* transition: background-color 0.2s, color 0.2s;  <-- 제거 */
 }
 
-
 .top-buttons .search-icon {
-    font-family: sans-serif;
     font-size: 24px; /* 검색 아이콘 크기 증가 */
     cursor: pointer; /* 커서 포인터는 유지합니다 */
     color: white;
     margin-left: 5px; /* 버튼과 아이콘 사이 간격 */
-    /* transition: transform 0.2s; <-- 제거 */
-}
-.footer {
-    font-family: sans-serif;
-    background-color: #4d6d83;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
 }
 
-body {
-    font-family: 'Nanum Myeongjo', serif; /* 기본 본문 폰트 */
-    margin: 0px;
-}
-
+/* --- 네비게이션 메뉴 --- */
 nav ul {
-    font-family: sans-serif;
     display: flex;
-    list-style: none;
     background-color: white;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    justify-content: space-around;
-    margin: 0px;
+    border-top: 1px solid #eee; /* 상단 테두리 유지 */
+    border-bottom: none; /* 네비게이션 하단 밑줄 제거 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 그림자 효과 */
+    justify-content: space-around; /* 메뉴 항목을 균등하게 분배 */
 }
+
 nav ul li {
-    font-family: sans-serif;
-    padding: 15px 20px;
-    cursor: pointer;
+    padding: 18px 25px; /* 패딩 증가 */
+    cursor: pointer; /* 커서 포인터는 유지합니다 */
     font-weight: bold;
-    text-decoration: none;
     color: black;
 }
 
+nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다면) */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+}
 /* section 내부 콘텐츠의 가독성 향상 스타일 */
 section {
     background-color: #fcfcfc; /* 흰색에 가까운 배경색으로 눈의 피로 감소 */
@@ -138,4 +154,17 @@ section hr {
     border: none;
     border-top: 1px solid #eee;
     margin: 50px 0;
+}
+
+.footer {
+    background-color: #4d6d83; /* 배경색 */
+    color: white; /* 텍스트 색상 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 30px 20px; /* 내부 패딩 */
+    margin-top: 60px; /* 상단 여백 */
+    font-size: 15px; /* 폰트 크기 */
+    line-height: 1.8; /* 줄 간격 */
+}
+.footer p {
+    text-decoration: none; /* 푸터 내 p 태그 텍스트 밑줄 제거 */
 }

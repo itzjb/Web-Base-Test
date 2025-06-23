@@ -182,6 +182,12 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
     display: flex; /* Flexbox 레이아웃 사용 */
     flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+    /* transition: transform 0.3s ease-in-out, box-shadow 0.3s; - 호버 애니메이션 제거 */
+}
+
+.card:hover {
+    /* transform: translateY(-12px); - 호버 시 위로 이동 제거 */
+    /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); - 호버 시 그림자 변경 제거 */
 }
 
 .card img {
@@ -207,7 +213,8 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
     line-height: 1.6; /* 줄 간격 */
 }
 
-/* --- 메인 페이지 하단 액션 버튼 --- */
+/* --- 메인 페이지 하단 액션 버튼 (신청하세요, 현장 속으로) --- */
+/* HTML에 <div class="action-buttons">와 <a class="button"> 구조가 있다면 */
 .action-buttons {
     display: flex; /* Flexbox 레이아웃 사용 */
     justify-content: center; /* 버튼들을 수평 중앙 정렬 */
@@ -225,7 +232,13 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
     text-decoration: none; /* 링크 밑줄 제거 */
     font-size: 18px; /* 폰트 크기 */
     font-weight: bold; /* 폰트 굵게 */
+    /* transition: background-color 0.3s ease, transform 0.2s ease; - 호버 애니메이션 제거 */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 그림자 효과 */
+}
+
+.action-buttons .button:hover {
+    /* background-color: #3d7090; - 호버 시 배경색 변경 제거 */
+    /* transform: translateY(-3px); - 호버 시 위로 이동 제거 */
 }
 
 /* --- 푸터 영역 --- */
@@ -244,7 +257,7 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
 
 /* --- 팝업 관련 스타일 (중복 제거 및 통합) --- */
 .popup {
-    display: none; /* 초기에는 숨김. JavaScript에 의해 flex로 변경 */
+    display: none; /* 초기에는 숨김. JavaScript에 의해 flex로 변경됩니다. */
     position: fixed; /* 고정 위치 */
     top: 0; /* 화면 상단에 고정 */
     left: 0; /* 화면 왼쪽에 고정 */
@@ -289,6 +302,12 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
     font-size: 34px; /* 폰트 크기 */
     cursor: pointer; /* 마우스 오버 시 포인터 커서 */
     color: #777; /* 색상 */
+    /* transition: color 0.2s ease, transform 0.2s; - 호버 애니메이션 제거 */
+}
+
+.close-btn:hover {
+    /* color: #000; - 호버 시 색상 변경 제거 */
+    /* transform: rotate(90deg); - 호버 시 회전 효과 제거 */
 }
 
 @keyframes fadeIn {
@@ -398,7 +417,12 @@ hr {
     border-radius: 8px; /* 모서리 둥글게 */
     font-size: 15px; /* 폰트 크기 */
     cursor: pointer; /* 마우스 오버 시 포인터 커서 */
+    /* transition: background-color 0.2s ease; <-- 제거: hover 효과 없음 */
 }
+
+/* .search-bar button:hover {
+    background-color: #3d7090; <-- 제거: hover 효과 없음
+} */
 
 /* 데이터 테이블 */
 .data-table {
@@ -447,7 +471,13 @@ hr {
     color: #2d5b76; /* 텍스트 색상 */
     text-decoration: none; /* 링크 밑줄 제거 */
     font-weight: bold; /* 폰트 굵게 */
+    /* transition: background-color 0.2s, color 0.2s; <-- 제거: hover 효과 없음 */
 }
+
+/* .pagination .page-link:hover {
+    background-color: #eef5ff;
+    color: #2d5b76;
+} */
 
 .pagination .page-link.active {
     background-color: #2d5b76; /* 활성 페이지 배경색 */
@@ -710,6 +740,11 @@ hr {
     /* transition: background-color 0.2s ease;  <-- 제거: hover 효과 없음 */
 }
 
+/* .search-bar button:hover {
+    background-color: #3d7090; <-- 제거: hover 효과 없음
+} */
+
+
 /* 데이터 테이블 */
 .data-table {
     width: 100%;
@@ -757,7 +792,13 @@ hr {
     color: #2d5b76;
     text-decoration: none;
     font-weight: bold;
+    /* transition: background-color 0.2s, color 0.2s; <-- 제거: hover 효과 없음 */
 }
+
+/* .pagination .page-link:hover {
+    background-color: #eef5ff;
+    color: #2d5b76;
+} */
 
 .pagination .page-link.active {
     background-color: #2d5b76;
