@@ -18,3 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
     // ✨ 페이지 로드 시 팝업 자동 표시 (이미지에 보이는 것처럼 하려면 이 부분을 사용하세요)
     popup.style.display = 'flex'; // 페이지가 로드되면 팝업을 바로 띄웁니다.
 });
+
+function showPlanTable() {
+    // 모든 section을 숨김
+    document.querySelectorAll("section").forEach(section => {
+        section.style.display = "none";
+    });
+
+    // plan-section만 표시
+    document.getElementById("plan-section").style.display = "block";
+}
+
+function showMainPG() {
+    // 모든 section을 숨김
+    document.querySelectorAll("section").forEach(section => {
+        section.style.display = "none";
+    });
+
+    // plan-section만 표시
+    document.getElementById("mainPG").style.display = "block";
+}
