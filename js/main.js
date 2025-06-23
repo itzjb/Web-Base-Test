@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 팝업 요소를 가져옵니다.
+    // 팝업 요소를 가져옴
     const popup = document.getElementById('popup'); // HTML에서 id="popup"으로 설정했으니, 그대로 사용합니다.
 
     // 팝업을 숨기는 함수 (HTML의 onclick="closePopup()"과 연결됩니다)
@@ -7,11 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
     window.closePopup = function() {
         popup.style.display = 'none'; // 팝업을 숨깁니다.
     };
-
-    // 팝업을 표시하는 함수 (선택 사항: 버튼으로 팝업을 열고 싶다면 사용)
-    // function showPopup() {
-    //     popup.style.display = 'flex'; // 팝업을 표시합니다.
-    // }
 
     // 팝업 외부 (오버레이) 클릭 시 팝업 숨기기
     popup.addEventListener('click', function(event) {
