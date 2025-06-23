@@ -38,3 +38,13 @@ function showMainPG() {
     // plan-section만 표시
     document.getElementById("mainPG").style.display = "block";
 }
+
+function showCardnews() {
+    // 모든 section을 숨김
+    document.querySelectorAll("section").forEach(section => {
+        section.style.display = "none";
+    });
+
+    // plan-section만 표시
+    document.getElementById("cards-section").style.display = "block";
+}
