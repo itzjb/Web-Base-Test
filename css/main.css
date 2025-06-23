@@ -170,9 +170,15 @@ nav ul li {
     margin-top: 20px;
 }
 .image-row a img {
-    width: 40%;
-    max-width: 300px;
+    width: 90%;
+    max-width: 400px;
     border-radius: 12px;
+    align-items: center;
+    align-self: center;
+}
+.image-row a{
+    align-items: center;
+    align-self: center;
 }
 .cards-section {
     margin: 20px;
