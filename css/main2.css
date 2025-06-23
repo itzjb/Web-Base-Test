@@ -413,12 +413,7 @@ hr {
     border-radius: 8px; /* 모서리 둥글게 */
     font-size: 15px; /* 폰트 크기 */
     cursor: pointer; /* 마우스 오버 시 포인터 커서 */
-    /* transition: background-color 0.2s ease; <-- 제거: hover 효과 없음 */
 }
-
-/* .search-bar button:hover {
-    background-color: #3d7090; <-- 제거: hover 효과 없음
-} */
 
 /* 데이터 테이블 */
 .data-table {
