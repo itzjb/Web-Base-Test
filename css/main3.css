@@ -3,6 +3,7 @@
 }
 /* --- 상단 헤더 --- */
 header {
+    font-family: sans-serif;
     background-color: #2d5b76;
     color: white;
     padding: 18px 30px; /* 패딩 증가 */
@@ -12,18 +13,21 @@ header {
 }
 
 header h1 {
+    font-family: sans-serif;
     font-size: 30px; /* 헤더 제목 폰트 크기 */
     color: white; /* 헤더 제목 색상 */
     margin-bottom: 0; /* 헤더 h1은 자체적으로 여백 없앰 */
 }
 
 .top-buttons {
+    font-family: sans-serif;
     display: flex;
     gap: 15px; /* 버튼 간격 증가 */
     align-items: center; /* 버튼 정렬 */
 }
 
 .top-buttons button {
+    font-family: sans-serif;
     background: white;
     color: #2d5b76;
     border: 1px solid #ccc;
@@ -36,6 +40,7 @@ header h1 {
 
 
 .top-buttons .search-icon {
+    font-family: sans-serif;
     font-size: 24px; /* 검색 아이콘 크기 증가 */
     cursor: pointer; /* 커서 포인터는 유지합니다 */
     color: white;
