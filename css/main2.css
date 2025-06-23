@@ -68,9 +68,6 @@ header h1 {
     /* transition: background-color 0.2s, color 0.2s;  <-- 제거 */
 }
 
-.top-buttons button:hover {
-    /* background-color: #e0e0e0; <-- 제거 */
-}
 
 .top-buttons .search-icon {
     font-size: 24px; /* 검색 아이콘 크기 증가 */
@@ -78,9 +75,6 @@ header h1 {
     color: white;
     margin-left: 5px; /* 버튼과 아이콘 사이 간격 */
     /* transition: transform 0.2s; <-- 제거 */
-}
-.top-buttons .search-icon:hover {
-    /* transform: scale(1.1); <-- 제거 */
 }
 
 /* --- 네비게이션 메뉴 --- */
