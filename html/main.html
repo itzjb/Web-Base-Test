@@ -1,64 +1,115 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>너였다면</title>
-<link rel="stylesheet" href="../css/web.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 브라우저 탭 제목 -->
+  <title>너였다면</title>
+  
+  <!-- 외부 CSS 파일 연결 -->
+  <link rel="stylesheet" href="../CSS/main.css">
 </head>
 <body>
-    <header>
-        <a href="../수행평가2/web.html"><h1>너였다면</h1></a>
-        <div class="top-buttons">
-        <button><a href="#">로그인</a></button>
-        <button><a href="#">회원가입</a></button>
-        </div>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">사건선택</a></li>
-            <li><a href="#">퀴즈풀기</a></li>
-            <li><a href="#">교육영상</a></li>
-            <li><a href="#">교육계획표</a></li>
-            <li><a href="#">보도자료</a></li>
-        </ul>
-    </nav>
 
-    <section class="message-box">
-        <h2>"누군가의 사례, 하지만 나의 선택일 수도 있었다."<br>
-        실제 사례를 체험하며 디지털 시민의 책임을 생각해보는 사이버 윤리 체험관</h2>
-        <div class="image-row">
-        <img src="../images/사실과 개인책임.avif" alt="사실과 개인책임">
-        <img src="../images/가짜뉴스.avif" alt="가짜뉴스">
-        </div>
-    </section>
+  <!-- 상단 헤더: 제목 + 로그인/회원가입 버튼 -->
+  <header>
+    <h1>너였다면</h1>
+    <div class="top-buttons">
+      <button>로그인</button>
+      <button>회원가입</button>
+    </div>
+  </header>
 
-    <section class="cards-section">
-        <div class="card-row">
-        <div class="card"><img src="../images/AI 교역 매개.png" alt="AI 교역 매개"><h3>교사가 이끄는 교실혁명 리플릿(영문)</h3>
-            <p>작성자: 관리자</p><p>작성일: 2024-09-30</p></div>
-        <div class="card"><img src="../images/AI 교과서 관련.png" alt="AI 교과서 관련"><h3>[카드뉴스]AI디지털 교과서가 궁금해요!</h3>
-            <p>작성자: 관리자</p><p>작성일: 2024-08-06</p></div>
-        <div class="card"><img src="../images/교사 연사 지원.png" alt="교사 연사 지원"><h3>[카드뉴스] 디지털 교육혁신을 위한 교사 연수에 3,818억 투입</h3>
-            <p>작성자: 관리자</p><p>작성일: 2024-04-15</p></div>
-        </div>
-        <div class="card-row">
-        <div class="card"><img src="../images/에듀테크.png" alt="에듀테크"><h3>공교육과 기술이 함께 발전하는 '에듀테크' 시대를 열어갑니다!</h3>
-            <p>작성자: 권혜윤</p><p>작성일: 2023-09-21</p></div>
-        <div class="card"><img src="../images/디지털 새싹 캠프1.jpg" alt="디지털 새싹 캠프1"><h3>[카드뉴스] 2023년 하반기 디지털새싹 캠프 신청하세요!</h3>
-            <p>작성자: 권혜윤</p><p>작성일: 2023-09-08</p></div>
-        <div class="card"><img src="../images/디지털 새싹 캠프2.jpg" alt="디지털 새싹 캠프2"><h3>[카드뉴스] 디지털새싹 캠프 현장 속으로!</h3>
-            <p>작성자: 권혜윤</p><p>작성일: 2023-05-04</p></div>
-        </div>
-    </section>
+  <!-- 네비게이션 메뉴: 5개 이상 구성 -->
+  <nav>
+    <ul>
+      <li>사건선택</li>
+      <li>퀴즈풀기</li>
+      <li>교육영상</li>
+      <li>교육계획표</li>
+      <li>보도자료</li>
+    </ul>
+  </nav>
 
-    <footer class="footer">
-        <p>개인정보처리방침     고객관리안내문    이용약관    이메일 수집 거부 </p>
-        <p>너였다면 인터넷 교육 회사  |  사용자등록번호 000-00-0000  |  대표이사 000</p>
-        <p>주소 00000 서울시 00구 00포 00 (너였다면빌딩)  |  대표번호 0000-0000</p>
-        <p>@ sjduTekaus1148</p>
-        <p>안녕하세요</p>
-    </footer>
-    <script src="../js/main.js"></script>
+  <!-- 메세지 영역: 제목과 설명, 이미지 포함 -->
+  <section class="message-box">
+    <!-- 제목 및 설명 텍스트 -->
+    <h1>메세지</h1>
+    <h2>
+      "누군가의 사례, 하지만 나의 선택일 수도 있었다."<br>
+      실제 사례를 체험하며 디지털 시민의 책임을 생각해보는 사이버 윤리 체험관
+    </h2>
+
+    <!-- 이미지 2개 삽입 (조건 '이미지 포함') -->
+    <div class="image-row">
+      <img src="../images/사실과 개인책임.avif" alt="사실과 개인책임">
+      <img src="../images/가짜뉴스.avif" alt="가짜뉴스">
+    </div>
+  </section>
+
+  <!-- 카드뉴스/영상 영역: 카드 형태 콘텐츠 6개 이상 (grid/flex로 정렬됨) -->
+  <section class="cards-section">
+    <h1>카드뉴스 . 영상</h1>
+
+    <!-- 카드 뉴스 1열 -->
+    <div class="card-row">
+      <!-- 카드 1 -->
+      <div class="card">
+        <img src="../images/AI 교역 매개.png" alt="AI 교역 매개">
+        <h3>교사가 이끄는 교실혁명 리플릿(영문)</h3>
+        <p>작성자: 관리자</p>
+        <p>작성일: 2024-09-30</p>
+      </div>
+      <!-- 카드 2 -->
+      <div class="card">
+        <img src="../images/AI 교과서 관련.png" alt="AI 교과서 관련">
+        <h3>[카드뉴스]AI디지털 교과서가 궁금해요!</h3>
+        <p>작성자: 관리자</p>
+        <p>작성일: 2024-08-06</p>
+      </div>
+      <!-- 카드 3 -->
+      <div class="card">
+        <img src="../images/교사 연사 지원.png" alt="교사 연사 지원">
+        <h3>[카드뉴스] 디지털 교육혁신을 위한 교사 연수에 3,818억 투입</h3>
+        <p>작성자: 관리자</p>
+        <p>작성일: 2024-04-15</p>
+      </div>
+    </div>
+
+    <!-- 카드 뉴스 2열 -->
+    <div class="card-row">
+      <!-- 카드 4 -->
+      <div class="card">
+        <img src="../images/에듀테크.png" alt="에듀테크">
+        <h3>공교육과 기술이 함께 발전하는 '에듀테크' 시대를 열어갑니다!</h3>
+        <p>작성자: 권혜윤</p>
+        <p>작성일: 2023-09-21</p>
+      </div>
+      <!-- 카드 5 -->
+      <div class="card">
+        <img src="../images/디지털 새싹 캠프1.jpg" alt="디지털 새싹 캠프1">
+        <h3>[카드뉴스] 2023년 하반기 디지털새싹 캠프 신청하세요!</h3>
+        <p>작성자: 권혜윤</p>
+        <p>작성일: 2023-09-08</p>
+      </div>
+      <!-- 카드 6 -->
+      <div class="card">
+        <img src="../images/디지털 새싹 캠프2.jpg" alt="디지털 새싹 캠프2">
+        <h3>[카드뉴스] 디지털새싹 캠프 현장 속으로!</h3>
+        <p>작성자: 권혜윤</p>
+        <p>작성일: 2023-05-04</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 영역: 저작권, 연락처, 개인정보 처리방침 등 조건 충족 -->
+  <footer class="footer">
+    <p>개인정보처리방침 고객관리안내문 이용약관 이메일 수집 거부 </p>
+    <p>너였다면 인터넷 교육 회사  |  사용자등록번호 000-00-0000  |  대표이사 000</p>
+    <p>주소 00000 서울시 00구 00포 00 (너였다면빌딩)  |  대표번호 0000-0000</p>
+    <p>@ sjduTekaus1148</p>
+  </footer>
+
 </body>
 </html>
