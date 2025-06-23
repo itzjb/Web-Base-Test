@@ -69,10 +69,6 @@ header h1 {
     /* transition: background-color 0.2s, color 0.2s; - 호버 애니메이션 제거 */
 }
 
-.top-buttons button:hover {
-    /* background-color: #e0e0e0; - 호버 시 배경색 변경 제거 */
-}
-
 /* 검색 아이콘 (HTML에 class="search-icon"이 있다면) */
 .top-buttons .search-icon {
     font-size: 24px;

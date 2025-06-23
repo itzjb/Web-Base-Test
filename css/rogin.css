@@ -1,0 +1,229 @@
+/* --- 로그인 폼 스타일 --- */
+.login-container {
+    /* 팝업으로 사용하지 않고 단독 페이지로 사용할 경우 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* 헤더/푸터를 제외한 최소 높이 */
+    background-color: #f8f8f8; /* 바디 배경색과 동일하게 */
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 400px; /* 로그인 박스 최대 너비 */
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 28px;
+    color: #2d5b76;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; /* 라벨과 입력 필드를 왼쪽 정렬 */
+}
+
+.input-group label {
+    display: block; /* 라벨을 블록 요소로 만들어 다음 줄로 내림 */
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    outline: none; /* 포커스 시 아웃라인 제거 */
+    transition: border-color 0.2s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="password"]:focus {
+    border-color: #2d5b76; /* 포커스 시 테두리 색상 변경 */
+}
+
+.login-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #2d5b76;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.2s ease;
+}
+
+/* 커서 포인터만 유지하고 hover 효과는 제거 */
+.login-button:hover {
+    /* background-color: #3d7090; <-- 제거 */
+}
+
+.links {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #2d5b76;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.2s ease;
+}
+
+/* 커서 포인터만 유지하고 hover 효과는 제거 */
+.links a:hover {
+    /* color: #555; <-- 제거 */
+}
+
+/* 모바일 반응형 */
+@media (max-width: 600px) {
+    .login-box {
+        padding: 30px 20px;
+        margin: 20px;
+    }
+    .login-box h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .input-group input {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+    .login-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+    .links {
+        font-size: 13px;
+        margin-top: 20px;
+    }
+}
+
+/* 전역 기본 설정: 모든 요소에 일괄 적용 */
+* {
+    text-decoration: none; /* 모든 링크 밑줄 제거 (가장 위에 두어 강제 적용) */
+    box-sizing: border-box; /* 패딩과 보더가 너비/높이에 포함되도록 설정 */
+    margin: 0;             /* 모든 요소의 외부 여백 초기화 */
+    padding: 0;            /* 모든 요소의 내부 여백 초기화 */
+    font-family: Arial, sans-serif; /* 기본 폰트 지정 */
+}
+
+/* body: 웹페이지 전체의 기본 스타일 (가독성 핵심) */
+body {
+    line-height: 1.6;      /* 줄 간격 설정 */
+    color: #333;           /* 기본 텍스트 색상 (진한 회색) */
+    background-color: #f8f8f8; /* 페이지 전체의 연한 배경색 */
+    font-size: 16px;       /* 기본 폰트 크기 설정 */
+}
+
+/* 제목 태그들의 기본 스타일 */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.4; /* 제목 줄 간격 */
+    margin-bottom: 0.8em; /* 제목 아래 여백 */
+    color: #2d5b76; /* 제목 색상 통일 (헤더 h1은 제외) */
+}
+
+p {
+    margin-bottom: 1em; /* 문단 아래 여백 */
+}
+
+ul {
+    list-style-type: none; /* 기본 리스트 마커 제거 */
+    padding-left: 0;       /* 리스트 항목 들여쓰기 제거 (필요시 하위 선택자에서 지정) */
+    margin-bottom: 1em;    /* 리스트 아래 여백 */
+}
+
+ul li {
+    margin-bottom: 0.5em; /* 각 리스트 항목 간의 여백 */
+}
+
+/* --- 상단 헤더 --- */
+header {
+    background-color: #2d5b76;
+    color: white;
+    padding: 18px 30px; /* 패딩 증가 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 30px; /* 헤더 제목 폰트 크기 */
+    color: white; /* 헤더 제목 색상 */
+    margin-bottom: 0; /* 헤더 h1은 자체적으로 여백 없앰 */
+}
+
+.top-buttons {
+    display: flex;
+    gap: 15px; /* 버튼 간격 증가 */
+    align-items: center; /* 버튼 정렬 */
+}
+
+.top-buttons button {
+    background: white;
+    color: #2d5b76;
+    border: 1px solid #ccc;
+    padding: 10px 18px; /* 버튼 패딩 증가 */
+    border-radius: 5px;
+    cursor: pointer; /* 커서 포인터 유지 */
+    font-size: 15px;
+    /* transition: background-color 0.2s, color 0.2s; - 호버 애니메이션 제거 */
+}
+
+nav ul {
+    display: flex;
+    background-color: white;
+    border-top: 1px solid #eee; /* 상단 테두리 유지 */
+    border-bottom: none; /* 네비게이션 하단 밑줄 제거 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 그림자 효과 */
+    justify-content: space-around; /* 메뉴 항목을 균등하게 분배 */
+}
+
+nav ul li {
+    padding: 18px 25px; /* 패딩 증가 */
+    cursor: pointer; /* 커서 포인터 유지 */
+    font-weight: bold;
+    color: black;
+    /* transition: background-color 0.3s, color 0.3s; - 호버 애니메이션 제거 */
+}
+
+nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다면) */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 부모 요소의 색상 상속 */
+}
+
+nav ul li:hover {
+    /* background-color: #eef5ff; - 호버 시 배경색 변경 제거 */
+    /* color: #2d5b76; - 호버 시 텍스트 색상 변경 제거 */
+}
+
+.footer {
+    background-color: #4d6d83;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 15px;
+    line-height: 1.8;
+    /* 푸터 내 텍스트 밑줄 제거를 위한 추가 (혹시 모를 경우) */
+}
+.footer p {
+    text-decoration: none;
+}
