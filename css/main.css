@@ -168,7 +168,7 @@ nav ul li {
     justify-content: space-around;
     margin-top: 20px;
 }
-.image-row img {
+.image-row a img {
     width: 40%;
     max-width: 300px;
     border-radius: 12px;
