@@ -27,10 +27,12 @@ nav ul {
     border-bottom: 1px solid #ccc;
     justify-content: space-around;
 }
-nav ul li {
+nav ul a li {
     padding: 15px 20px;
     cursor: pointer;
     font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
 .top-buttons {
     display: flex;
