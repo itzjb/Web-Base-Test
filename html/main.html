@@ -23,23 +23,23 @@
         <a href="../html/main.html"><h1>너였다면</h1></a>
         <div class="top-buttons">
         <a href="../html/login.html"><button>로그인</button></a>
-        <a href=""><button>회원가입</button></a>
+        <a href="#"><button>회원가입</button></a>
         </div>
     </header>
 
     <!-- 네비게이션 메뉴: 5개 이상 구성 -->
     <nav>
         <ul>
-            <a href="#"><li>사건선택</li></a>
+            <a href="javascript:void(0);" onclick="showMainPG()"><li>사건선택</li></a>
             <a href="#"><li>퀴즈풀기</li></a>
             <a href="#"><li>교육영상</li></a>
-            <a href="../html/plan.html"><li>교육계획표</li></a>
+            <a href="javascript:void(0);" onclick="showPlanTable()"><li>교육계획표</li></a>
             <a href="#"><li>보도자료</li></a>
         </ul>
     </nav>
 
     <!-- 메세지 영역: 제목과 설명, 이미지 포함 -->
-    <section class="message-box">
+    <section class="message-box" id="mainPG">
         <!-- 제목 및 설명 텍스트 -->
         <h1>메세지</h1>
         <h2>
@@ -105,6 +105,80 @@
             <p>작성자: 권혜윤</p>
             <p>작성일: 2023-05-04</p>
         </div>
+        </div>
+    </section>
+
+    <section id="plan-section" style="display: none;">
+        <div class="education-plan-container">
+            <h2>교육계획표</h2>
+        
+            <div class="table-controls">
+                <div class="search-bar">
+                    <select id="searchCategory">
+                        <option value="제목">제목</option>
+                        <option value="내용">내용</option>
+                        <option value="작성자">작성자</option>
+                    </select>
+                    <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+                    <button id="searchButton">검색</button>
+                </div>
+        </div>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>등록자</th>
+                    <th>등록일</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5</td>
+                    <td>초중고 디지털 인프라 개선(안)</td>
+                    <td>행정안</td>
+                    <td>2024-05-15</td>
+                    <td>5657</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>디지털 기반 교육혁신 방향안</td>
+                    <td>정책부</td>
+                    <td>2024-04-15</td>
+                    <td>10456</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>에듀테크 진흥방안</td>
+                    <td>교육부</td>
+                    <td>2023-09-18</td>
+                    <td>11246</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>디지털 교육혁신방안</td>
+                    <td>강성화</td>
+                    <td>2023-02-23</td>
+                    <td>25638</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2022년 디지털 인재양성 종합방안 기본계획</td>
+                    <td>권혁율</td>
+                    <td>2022-09-15</td>
+                    <td>27970</td>
+                </tr>
+                </tbody>
+        </table>
+    
+        <div class="pagination">
+            <a href="#" class="page-link">&lt;</a>
+            <a href="#" class="page-link active">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link">&gt;</a>
         </div>
     </section>
 
