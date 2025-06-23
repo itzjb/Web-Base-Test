@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     popup.style.display = 'flex'; // 페이지가 로드되면 팝업을 바로 띄웁니다.
 });
 
-function showPlanTable() {
+function showPlanTable() { // 모든 section을 숨기고, 교육계획표만 표시하는 함수
     // 모든 section을 숨김
     document.querySelectorAll("section").forEach(section => {
         section.style.display = "none";
@@ -29,22 +29,22 @@ function showPlanTable() {
     document.getElementById("plan-section").style.display = "block";
 }
 
-function showMainPG() {
+function showMainPG() { // 모든 section을 숨기고, 메인 페이지(사건선택)만 표시하는 함수
     // 모든 section을 숨김
     document.querySelectorAll("section").forEach(section => {
         section.style.display = "none";
     });
 
-    // plan-section만 표시
+    // mainPG만 표시
     document.getElementById("mainPG").style.display = "block";
 }
 
-function showCardnews() {
+function showCardnews() { // 모든 section을 숨기고, 카드뉴스만 표시하는 함수
     // 모든 section을 숨김
     document.querySelectorAll("section").forEach(section => {
         section.style.display = "none";
     });
 
-    // plan-section만 표시
+    // cards-section만 표시
     document.getElementById("cards-section").style.display = "block";
 }
