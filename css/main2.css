@@ -76,28 +76,6 @@ header h1 {
     margin-left: 5px; /* 버튼과의 왼쪽 간격 */
 }
 
-/* --- 네비게이션 메뉴 --- */
-nav ul {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    background-color: white; /* 배경색 */
-    border-top: 1px solid #eee; /* 상단 테두리 */
-    border-bottom: none; /* 하단 테두리 없음 */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 그림자 효과 */
-    justify-content: space-around; /* 메뉴 항목을 균등하게 분배 */
-}
-
-nav ul li {
-    padding: 18px 25px; /* 내부 패딩 */
-    cursor: pointer; /* 마우스 오버 시 포인터 커서 */
-    font-weight: bold; /* 폰트 굵게 */
-    color: black; /* 텍스트 색상 */
-}
-
-nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다면) */
-    text-decoration: none; /* 링크 밑줄 제거 */
-    color: inherit; /* 부모 요소의 색상 상속 */
-}
-
 /* --- 메세지 영역 (메인 콘텐츠) --- */
 .message-box {
     background-color: #ffffff; /* 배경색 */
