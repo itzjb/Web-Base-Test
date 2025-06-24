@@ -46,7 +46,11 @@ header {
     align-items: center;
 }
 
+<<<<<<< Updated upstream
 header h1 { /* 헤더 제목 폰트 크기 */
+=======
+header h1 { /* 헤더 제목 */
+>>>>>>> Stashed changes
     font-size: 30px;
     color: white; /* 헤더 제목 색상 */
     margin-bottom: 0; /* 헤더 h1은 자체적으로 여백 없앰 */
