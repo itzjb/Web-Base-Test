@@ -1,29 +1,30 @@
 /* 전역 기본 설정: 모든 요소에 일괄 적용 */
 * {
-    /* 밑줄 없애기 (링크) */
+    /* 링크 밑줄 제거 */
     text-decoration: none;
-    /* 테두리, 여백 계산 방식 정리 */
+    /* 패딩, 테두리가 요소 크기에 포함되도록 설정 */
     box-sizing: border-box;
-    /* 바깥 여백과 안쪽 여백 없앰 */
+    /* 모든 바깥 여백 제거 */
     margin: 0;
+    /* 모든 안쪽 여백 제거 */
     padding: 0;
-    /* 전체 글꼴 설정 */
+    /* 기본 글꼴 설정 */
     font-family: Arial, sans-serif;
 }
 
 /* 웹페이지 전체의 기본 스타일 */
 body {
-    line-height: 1.6;      /* 줄 간격 설정 */
-    color: #333;           /* 기본 텍스트 색상 (진한 회색) */
-    background-color: #f8f8f8; /* 페이지 전체의 연한 배경색 */
-    font-size: 16px;       /* 기본 폰트 크기 설정 */
+    line-height: 1.6;      /* 줄 간격 */
+    color: #333;           /* 기본 텍스트 색상 */
+    background-color: #f8f8f8; /* 페이지 배경색 */
+    font-size: 16px;       /* 기본 폰트 크기 */
 }
 
 /* 제목 태그들의 기본 스타일 */
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; /* 제목 줄 간격 */
     margin-bottom: 0.8em; /* 제목 아래 여백 */
-    color: #2d5b76; /* 제목 색상 통일 (헤더 h1은 제외) */
+    color: #2d5b76; /* 제목 색상 */
 }
 
 p {
@@ -31,35 +32,35 @@ p {
 }
 
 ul {
-    list-style-type: none; /* 기본 리스트 마커 제거 */
-    padding-left: 0;       /* 리스트 항목 들여쓰기 제거 (필요시 하위 선택자에서 지정) */
+    list-style-type: none; /* 리스트 마커 제거 */
+    padding-left: 0;       /* 리스트 들여쓰기 제거 */
     margin-bottom: 1em;    /* 리스트 아래 여백 */
 }
 
 ul li {
-    margin-bottom: 0.5em; /* 각 리스트 항목 간의 여백 */
+    margin-bottom: 0.5em; /* 각 리스트 항목 여백 */
 }
 
 /* --- 상단 헤더 --- */
 header {
     background-color: #2d5b76; /* 헤더 배경색 */
     color: white; /* 헤더 텍스트 색상 */
-    padding: 18px 30px; /* 상하 18px, 좌우 30px 패딩 */
-    display: flex; /* Flexbox 레이아웃 사용 */
-    justify-content: space-between; /* 자식 요소들을 양 끝으로 정렬 */
-    align-items: center; /* 자식 요소들을 세로 중앙 정렬 */
+    padding: 18px 30px; /* 헤더 내부 패딩 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: space-between; /* 양 끝 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
 }
 
 header h1 {
     font-size: 30px; /* 헤더 제목 폰트 크기 */
     color: white; /* 헤더 제목 색상 */
-    margin-bottom: 0; /* 헤더 h1의 하단 여백 제거 */
+    margin-bottom: 0; /* 하단 여백 제거 */
 }
 
 .top-buttons {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    gap: 15px; /* 버튼 간의 간격 */
-    align-items: center; /* 버튼들을 세로 중앙 정렬 */
+    display: flex; /* Flexbox 사용 */
+    gap: 15px; /* 버튼 간격 */
+    align-items: center; /* 세로 중앙 정렬 */
 }
 
 .top-buttons button {
@@ -68,45 +69,45 @@ header h1 {
     border: 1px solid #ccc; /* 버튼 테두리 */
     padding: 10px 18px; /* 버튼 내부 패딩 */
     border-radius: 5px; /* 버튼 모서리 둥글게 */
-    cursor: pointer; /* 마우스 오버 시 포인터 커서 */
+    cursor: pointer; /* 포인터 커서 */
     font-size: 15px; /* 버튼 폰트 크기 */
 }
 
-/* 검색 아이콘 (HTML에 class="search-icon"이 있다면) */
+/* 검색 아이콘 */
 .top-buttons .search-icon {
-    font-size: 24px; /* 검색 아이콘 크기 */
-    cursor: pointer; /* 마우스 오버 시 포인터 커서 */
+    font-size: 24px; /* 아이콘 크기 */
+    cursor: pointer; /* 포인터 커서 */
     color: white; /* 아이콘 색상 */
-    margin-left: 5px; /* 버튼과의 왼쪽 간격 */
+    margin-left: 5px; /* 왼쪽 간격 */
 }
 
 /* --- 네비게이션 메뉴 --- */
 nav ul {
-    display: flex; /* Flexbox 레이아웃 사용 */
+    display: flex; /* Flexbox 사용 */
     background-color: white; /* 배경색 */
     border-top: 1px solid #eee; /* 상단 테두리 */
     border-bottom: none; /* 하단 테두리 없음 */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 그림자 효과 */
-    justify-content: space-around; /* 메뉴 항목을 균등하게 분배 */
+    justify-content: space-around; /* 메뉴 항목 균등 분배 */
 }
 
 nav ul li {
     padding: 18px 25px; /* 내부 패딩 */
-    cursor: pointer; /* 마우스 오버 시 포인터 커서 */
+    cursor: pointer; /* 포인터 커서 */
     font-weight: bold; /* 폰트 굵게 */
     color: black; /* 텍스트 색상 */
 }
 
-nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다면) */
+nav ul li a {
     text-decoration: none; /* 링크 밑줄 제거 */
-    color: inherit; /* 부모 요소의 색상 상속 */
+    color: inherit; /* 부모 색상 상속 */
 }
 
 /* --- 메세지 영역 (메인 콘텐츠) --- */
 .message-box {
     background-color: #ffffff; /* 배경색 */
     border: 1px solid #ddd; /* 테두리 */
-    margin: 40px auto; /* 상하 40px, 좌우 자동 (중앙 정렬) */
+    margin: 40px auto; /* 상하 여백, 좌우 자동 (중앙 정렬) */
     max-width: 1000px; /* 최대 너비 */
     padding: 50px; /* 내부 패딩 */
     border-radius: 12px; /* 모서리 둥글게 */
@@ -114,33 +115,33 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
     text-align: center; /* 텍스트 중앙 정렬 */
 }
 
-.message-box h1 { /* 메시지 박스 내 제목 (추가) */
+.message-box h1 { /* 메시지 박스 제목 */
     font-size: 38px; /* 폰트 크기 */
     color: #2d5b76; /* 폰트 색상 */
     margin-bottom: 25px; /* 하단 여백 */
     font-weight: 700; /* 폰트 굵기 */
 }
 
-.message-box h2 { /* 메시지 박스 내 설명 */
+.message-box h2 { /* 메시지 박스 설명 */
     font-size: 22px; /* 폰트 크기 */
     line-height: 1.7; /* 줄 간격 */
     color: #555; /* 폰트 색상 */
     margin-bottom: 50px; /* 하단 여백 */
     max-width: 800px; /* 최대 너비 */
-    margin-left: auto; /* 좌우 자동 마진으로 중앙 정렬 */
-    margin-right: auto; /* 좌우 자동 마진으로 중앙 정렬 */
+    margin-left: auto; /* 중앙 정렬 */
+    margin-right: auto; /* 중앙 정렬 */
 }
 
 .image-row {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    justify-content: center; /* 자식 요소들을 수평 중앙 정렬 */
-    gap: 40px; /* 이미지 간의 간격 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    gap: 40px; /* 이미지 간격 */
     margin-top: 30px; /* 상단 여백 */
-    flex-wrap: wrap; /* 공간 부족 시 다음 줄로 넘김 */
+    flex-wrap: wrap; /* 공간 부족 시 줄 바꿈 */
 }
 
 .image-row a img {
-    width: 100%; /* 부모 요소의 너비에 꽉 차게 */
+    width: 100%; /* 부모 너비에 꽉 차게 */
     max-width: 450px; /* 최대 너비 */
     height: auto; /* 이미지 비율 유지 */
     border-radius: 15px; /* 모서리 둥글게 */
@@ -151,14 +152,14 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
 .cards-section {
     background-color: #ffffff; /* 배경색 */
     border: 1px solid #ddd; /* 테두리 */
-    margin: 60px auto; /* 상하 60px, 좌우 자동 (중앙 정렬) */
+    margin: 60px auto; /* 상하 여백, 좌우 자동 (중앙 정렬) */
     max-width: 1000px; /* 최대 너비 */
     padding: 50px; /* 내부 패딩 */
     border-radius: 12px; /* 모서리 둥글게 */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* 그림자 효과 */
 }
 
-.cards-section h1 { /* 카드 섹션 제목 (추가) */
+.cards-section h1 { /* 카드 섹션 제목 */
     font-size: 34px; /* 폰트 크기 */
     color: #2d5b76; /* 폰트 색상 */
     margin-bottom: 40px; /* 하단 여백 */
@@ -167,36 +168,34 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
 }
 
 .card-row {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    flex-wrap: wrap; /* 공간 부족 시 다음 줄로 넘김 */
-    gap: 30px; /* 카드 간의 간격 */
-    justify-content: center; /* 카드들을 수평 중앙 정렬 */
+    display: flex; /* Flexbox 사용 */
+    flex-wrap: wrap; /* 공간 부족 시 줄 바꿈 */
+    gap: 30px; /* 카드 간격 */
+    justify-content: center; /* 카드 수평 중앙 정렬 */
 }
 
 .card {
-    width: calc((100% - 60px) / 3); /* 3개 카드, 30px 간격 2개를 고려한 너비 */
+    width: calc((100% - 60px) / 3); /* 3열 카드 너비 계산 */
     border: 1px solid #eee; /* 테두리 */
     border-radius: 12px; /* 모서리 둥글게 */
-    overflow: hidden; /* 내용이 넘칠 경우 숨김 */
+    overflow: hidden; /* 내용 넘칠 경우 숨김 */
     background-color: white; /* 배경색 */
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-    display: flex; /* Flexbox 레이아웃 사용 */
-    flex-direction: column; /* 자식 요소들을 세로로 정렬 */
-    /* transition: transform 0.3s ease-in-out, box-shadow 0.3s; - 호버 애니메이션 제거 */
+    display: flex; /* Flexbox 사용 */
+    flex-direction: column; /* 자식 요소 세로 정렬 */
 }
 
-
 .card img {
-    width: 100%; /* 부모 요소의 너비에 꽉 차게 */
+    width: 100%; /* 부모 너비에 꽉 차게 */
     height: 240px; /* 이미지 높이 */
-    object-fit: cover; /* 이미지가 잘리지 않게 채움 */
-    display: block; /* 블록 요소로 설정 */
+    object-fit: cover; /* 이미지 잘리지 않게 채움 */
+    display: block; /* 블록 요소 */
     border-bottom: 1px solid #eee; /* 하단 테두리 */
 }
 
 .card h3 {
     font-size: 20px; /* 폰트 크기 */
-    margin: 20px 22px 10px; /* 상 20px, 좌우 22px, 하 10px 마진 */
+    margin: 20px 22px 10px; /* 내부 마진 */
     color: #333; /* 폰트 색상 */
     line-height: 1.4; /* 줄 간격 */
     font-weight: 600; /* 폰트 굵기 */
@@ -205,22 +204,21 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
 .card p {
     font-size: 14px; /* 폰트 크기 */
     color: #777; /* 폰트 색상 */
-    margin: 0 22px 18px; /* 상 0, 좌우 22px, 하 18px 마진 */
+    margin: 0 22px 18px; /* 내부 마진 */
     line-height: 1.6; /* 줄 간격 */
 }
 
 /* --- 메인 페이지 하단 액션 버튼 (신청하세요, 현장 속으로) --- */
-/* HTML에 <div class="action-buttons">와 <a class="button"> 구조가 있다면 */
 .action-buttons {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    justify-content: center; /* 버튼들을 수평 중앙 정렬 */
-    gap: 30px; /* 버튼 간의 간격 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    gap: 30px; /* 버튼 간격 */
     margin-top: 50px; /* 상단 여백 */
-    flex-wrap: wrap; /* 공간 부족 시 다음 줄로 넘김 */
+    flex-wrap: wrap; /* 공간 부족 시 줄 바꿈 */
 }
 
 .action-buttons .button {
-    display: inline-block; /* 인라인 블록 요소로 설정 (너비, 높이, 마진, 패딩 적용 가능) */
+    display: inline-block; /* 인라인 블록 요소 */
     background-color: #2d5b76; /* 배경색 */
     color: white; /* 텍스트 색상 */
     padding: 15px 30px; /* 내부 패딩 */
@@ -228,10 +226,8 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
     text-decoration: none; /* 링크 밑줄 제거 */
     font-size: 18px; /* 폰트 크기 */
     font-weight: bold; /* 폰트 굵게 */
-    /* transition: background-color 0.3s ease, transform 0.2s ease; - 호버 애니메이션 제거 */
     box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 그림자 효과 */
 }
-
 
 /* --- 푸터 영역 --- */
 .footer {
@@ -244,21 +240,19 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
     line-height: 1.8; /* 줄 간격 */
 }
 .footer p {
-    text-decoration: none; /* 푸터 내 p 태그 텍스트 밑줄 제거 */
+    text-decoration: none; /* 푸터 p 태그 텍스트 밑줄 제거 */
 }
 
-/* --- 팝업 관련 스타일 (중복 제거 및 통합) --- */
+/* --- 팝업 관련 스타일 --- */
 .popup {
-    display: none; /* 초기에는 숨김. JavaScript에 의해 flex로 변경됩니다. */
+    display: none; /* 초기 숨김 */
     position: fixed; /* 고정 위치 */
-    top: 0; /* 화면 상단에 고정 */
-    left: 0; /* 화면 왼쪽에 고정 */
-    width: 100%; /* 전체 너비 */
-    height: 100%; /* 전체 높이 */
-    background-color: rgba(0, 0, 0, 0.6); /* 반투명 검정 배경 */
-    display: flex; /* Flexbox 레이아웃 사용 (콘텐츠 중앙 정렬을 위함) */
-    justify-content: center; /* 자식 요소들을 수평 중앙 정렬 */
-    align-items: center; /* 자식 요소들을 세로 중앙 정렬 */
+    top: 0; left: 0; /* 화면 상단/왼쪽 고정 */
+    width: 100%; height: 100%; /* 전체 너비/높이 */
+    background-color: rgba(0, 0, 0, 0.6); /* 반투명 배경 */
+    display: flex; /* Flexbox 사용 (콘텐츠 중앙 정렬) */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
     z-index: 1000; /* 다른 콘텐츠 위에 표시 */
 }
 
@@ -268,10 +262,10 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
     border-radius: 10px; /* 모서리 둥글게 */
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* 그림자 효과 */
     text-align: center; /* 텍스트 중앙 정렬 */
-    position: relative; /* 자식 요소 (닫기 버튼)의 위치 기준 */
+    position: relative; /* 닫기 버튼 위치 기준 */
     max-width: 500px; /* 최대 너비 */
     width: 90%; /* 너비 */
-    animation: fadeIn 0.4s ease-out; /* 팝업 등장 애니메이션 (0.4초 동안 부드럽게) */
+    animation: fadeIn 0.4s ease-out; /* 등장 애니메이션 */
 }
 
 .popup-content h2 { /* 팝업 제목 */
@@ -289,24 +283,21 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
 
 .close-btn {
     position: absolute; /* 절대 위치 */
-    top: 15px; /* 상단에서 15px */
-    right: 20px; /* 오른쪽에서 20px */
+    top: 15px; right: 20px; /* 위치 설정 */
     font-size: 34px; /* 폰트 크기 */
-    cursor: pointer; /* 마우스 오버 시 포인터 커서 */
+    cursor: pointer; /* 포인터 커서 */
     color: #777; /* 색상 */
-    /* transition: color 0.2s ease, transform 0.2s; - 호버 애니메이션 제거 */
 }
-
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-30px); } /* 시작점: 투명하고 위로 30px 이동 */
-    to { opacity: 1; transform: translateY(0); } /* 끝점: 불투명하고 제자리 */
+    from { opacity: 0; transform: translateY(-30px); } /* 시작점 */
+    to { opacity: 1; transform: translateY(0); } /* 끝점 */
 }
 
-/* --- 설문조사 결과 페이지 관련 스타일 (독립적인 페이지 스타일) --- */
+/* --- 설문조사 결과 페이지 관련 스타일 --- */
 .survey-results-container {
     max-width: 1000px; /* 최대 너비 */
-    margin: 60px auto; /* 상하 60px, 좌우 자동 (중앙 정렬) */
+    margin: 60px auto; /* 상하 여백, 좌우 자동 (중앙 정렬) */
     padding: 50px; /* 내부 패딩 */
     background-color: #ffffff; /* 배경색 */
     border-radius: 12px; /* 모서리 둥글게 */
@@ -330,13 +321,13 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
 }
 
 .survey-results-container ul {
-    list-style-type: disc; /* 리스트 마커는 점 유지 */
+    list-style-type: disc; /* 리스트 마커 점 */
     padding-left: 35px; /* 왼쪽 들여쓰기 */
     margin-bottom: 30px; /* 하단 여백 */
 }
 
 .survey-results-container ul li {
-    margin-bottom: 12px; /* 각 리스트 항목 간의 여백 */
+    margin-bottom: 12px; /* 각 리스트 항목 여백 */
     font-size: 18px; /* 폰트 크기 */
     line-height: 1.7; /* 줄 간격 */
     color: #444; /* 폰트 색상 */
@@ -344,14 +335,14 @@ nav ul li a { /* nav 메뉴 내 링크에 대한 스타일 (HTML에 <a> 있다�
 
 hr {
     border: none; /* 기본 테두리 제거 */
-    border-top: 1px solid #ddd; /* 상단에 1px 실선 테두리 */
+    border-top: 1px solid #ddd; /* 얇은 상단 실선 테두리 */
     margin: 50px 0; /* 상하 50px 마진 */
 }
 
 /* --- 교육계획표 섹션 --- */
 .education-plan-container {
     max-width: 1000px; /* 최대 너비 */
-    margin: 60px auto; /* 상하 60px, 좌우 자동 (중앙 정렬) */
+    margin: 60px auto; /* 상하 여백, 좌우 자동 (중앙 정렬) */
     padding: 50px; /* 내부 패딩 */
     background-color: #ffffff; /* 배경색 */
     border-radius: 12px; /* 모서리 둥글게 */
@@ -369,17 +360,17 @@ hr {
 
 /* 테이블 컨트롤 (검색 바) */
 .table-controls {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    justify-content: flex-end; /* 자식 요소들을 오른쪽 정렬 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: flex-end; /* 오른쪽 정렬 */
     margin-bottom: 25px; /* 하단 여백 */
-    gap: 10px; /* 요소 간의 간격 */
-    flex-wrap: wrap; /* 공간 부족 시 다음 줄로 넘김 */
+    gap: 10px; /* 요소 간 간격 */
+    flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
 }
 
 .search-bar {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    align-items: center; /* 자식 요소들을 세로 중앙 정렬 */
-    gap: 10px; /* 요소 간의 간격 */
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 10px; /* 요소 간 간격 */
 }
 
 .search-bar select,
@@ -389,11 +380,11 @@ hr {
     border-radius: 8px; /* 모서리 둥글게 */
     font-size: 15px; /* 폰트 크기 */
     color: #333; /* 폰트 색상 */
-    outline: none; /* 포커스 시 아웃라인 제거 */
+    outline: none; /* 포커스 아웃라인 제거 */
 }
 
 .search-bar input[type="text"] {
-    flex-grow: 1; /* 입력 필드 너비 확장 */
+    flex-grow: 1; /* 너비 확장 */
     max-width: 250px; /* 최대 너비 */
 }
 
@@ -404,13 +395,8 @@ hr {
     border: none; /* 테두리 없음 */
     border-radius: 8px; /* 모서리 둥글게 */
     font-size: 15px; /* 폰트 크기 */
-    cursor: pointer; /* 마우스 오버 시 포인터 커서 */
-    /* transition: background-color 0.2s ease; <-- 제거: hover 효과 없음 */
+    cursor: pointer; /* 포인터 커서 */
 }
-
-/* .search-bar button:hover {
-    background-color: #3d7090; <-- 제거: hover 효과 없음
-} */
 
 /* 데이터 테이블 */
 .data-table {
@@ -435,7 +421,7 @@ hr {
 }
 
 .data-table tbody tr:last-child {
-    border-bottom: none; /* 마지막 행의 하단 경계선 제거 */
+    border-bottom: none; /* 마지막 행 하단 경계선 제거 */
 }
 
 .data-table tbody tr:nth-child(even) {
@@ -444,28 +430,22 @@ hr {
 
 /* 페이징 */
 .pagination {
-    display: flex; /* Flexbox 레이아웃 사용 */
-    justify-content: center; /* 자식 요소들을 수평 중앙 정렬 */
-    align-items: center; /* 자식 요소들을 세로 중앙 정렬 */
-    gap: 8px; /* 링크 간의 간격 */
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 중앙 정렬 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 8px; /* 링크 간 간격 */
     margin-top: 20px; /* 상단 여백 */
 }
 
 .pagination .page-link {
-    display: block; /* 블록 요소로 만들어 패딩 적용 */
+    display: block; /* 블록 요소 */
     padding: 10px 15px; /* 내부 패딩 */
     border: 1px solid #ddd; /* 테두리 */
     border-radius: 5px; /* 모서리 둥글게 */
     color: #2d5b76; /* 텍스트 색상 */
     text-decoration: none; /* 링크 밑줄 제거 */
     font-weight: bold; /* 폰트 굵게 */
-    /* transition: background-color 0.2s, color 0.2s; <-- 제거: hover 효과 없음 */
 }
-
-/* .pagination .page-link:hover {
-    background-color: #eef5ff;
-    color: #2d5b76;
-} */
 
 .pagination .page-link.active {
     background-color: #2d5b76; /* 활성 페이지 배경색 */
@@ -473,17 +453,18 @@ hr {
     border-color: #2d5b76; /* 활성 페이지 테두리 색상 */
 }
 
-/* 반응형 웹 디자인 */
+/* 반응형 웹 디자인 (1200px 이하) */
 @media (max-width: 1200px) {
     .cards-section, .message-box, .survey-results-container {
         margin: 30px 25px; /* 상하 30px, 좌우 25px 마진 */
         padding: 40px; /* 내부 패딩 */
     }
     .card {
-        width: calc((100% - 30px) / 2); /* 2열 (30px 간격 1개를 고려) */
+        width: calc((100% - 30px) / 2); /* 2열 카드 너비 */
     }
 }
 
+/* 반응형 웹 디자인 (900px 이하) */
 @media (max-width: 900px) {
     header, nav ul {
         padding-left: 20px; /* 왼쪽 패딩 */
@@ -516,7 +497,7 @@ hr {
     }
     .image-row {
         flex-direction: column; /* 세로 정렬 */
-        align-items: center; /* 자식 요소들을 수평 중앙 정렬 */
+        align-items: center; /* 수평 중앙 정렬 */
         gap: 30px; /* 이미지 간격 */
     }
     .image-row a img {
@@ -576,6 +557,7 @@ hr {
     }
 }
 
+/* 반응형 웹 디자인 (600px 이하) */
 @media (max-width: 600px) {
     body {
         font-size: 15px; /* 폰트 크기 */
@@ -594,7 +576,7 @@ hr {
         font-size: 18px; /* 아이콘 크기 */
     }
     nav ul {
-        flex-wrap: wrap; /* 공간 부족 시 다음 줄로 넘김 */
+        flex-wrap: wrap; /* 공간 부족 시 줄 바꿈 */
         justify-content: center; /* 수평 중앙 정렬 */
     }
     nav ul li {
@@ -635,7 +617,7 @@ hr {
     }
     .action-buttons .button {
         width: 80%; /* 너비 */
-        margin: 0 auto; /* 좌우 자동 마진 (중앙 정렬) */
+        margin: 0 auto; /* 중앙 정렬 */
         text-align: center; /* 텍스트 중앙 정렬 */
         padding: 10px 20px; /* 내부 패딩 */
         font-size: 15px; /* 폰트 크기 */
@@ -668,188 +650,6 @@ hr {
     }
 }
 
-/* --- 교육계획표 섹션 --- */
-.education-plan-container {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 50px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-}
-
-.education-plan-container h2 {
-    font-size: 32px;
-    color: #2d5b76;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 18px;
-    text-align: left;
-}
-
-/* 테이블 컨트롤 (검색 바) */
-.table-controls {
-    display: flex;
-    justify-content: flex-end; /* 오른쪽 정렬 */
-    margin-bottom: 25px;
-    gap: 10px; /* 요소 간 간격 */
-    flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
-}
-
-.search-bar {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.search-bar select,
-.search-bar input[type="text"] {
-    padding: 10px 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 15px;
-    color: #333;
-    outline: none;
-}
-
-.search-bar input[type="text"] {
-    flex-grow: 1; /* 입력 필드 너비 확장 */
-    max-width: 250px;
-}
-
-.search-bar button {
-    padding: 10px 18px;
-    background-color: #2d5b76;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 15px;
-    cursor: pointer;
-    /* transition: background-color 0.2s ease;  <-- 제거: hover 효과 없음 */
-}
-
-/* .search-bar button:hover {
-    background-color: #3d7090; <-- 제거: hover 효과 없음
-} */
-
-
-/* 데이터 테이블 */
-.data-table {
-    width: 100%;
-    border-collapse: collapse; /* 셀 경계선 제거 */
-    margin-bottom: 30px;
-    font-size: 15px;
-}
-
-.data-table th,
-.data-table td {
-    padding: 15px;
-    border-bottom: 1px solid #eee; /* 하단 경계선 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-}
-
-.data-table th {
-    background-color: #f5f5f5;
-    font-weight: bold;
-    color: #2d5b76;
-    border-top: 2px solid #2d5b76; /* 상단 강조 테두리 */
-}
-
-.data-table tbody tr:last-child {
-    border-bottom: none; /* 마지막 행의 하단 경계선 제거 */
-}
-
-.data-table tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* 짝수 행 배경색 */
-}
-
-/* 페이징 */
-.pagination {
-    display: flex;
-    justify-content: center; /* 중앙 정렬 */
-    align-items: center;
-    gap: 8px; /* 링크 간 간격 */
-    margin-top: 20px;
-}
-
-.pagination .page-link {
-    display: block; /* 블록 요소로 만들어 패딩 적용 */
-    padding: 10px 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    color: #2d5b76;
-    text-decoration: none;
-    font-weight: bold;
-    /* transition: background-color 0.2s, color 0.2s; <-- 제거: hover 효과 없음 */
-}
-
-/* .pagination .page-link:hover {
-    background-color: #eef5ff;
-    color: #2d5b76;
-} */
-
-.pagination .page-link.active {
-    background-color: #2d5b76;
-    color: white;
-    border-color: #2d5b76;
-}
-
-/* 반응형 웹 디자인 */
-@media (max-width: 900px) {
-    .education-plan-container {
-        margin: 40px 20px;
-        padding: 30px;
-    }
-    .education-plan-container h2 {
-        font-size: 28px;
-        margin-bottom: 25px;
-        padding-bottom: 15px;
-    }
-    .table-controls {
-        flex-direction: column; /* 세로 정렬 */
-        align-items: stretch; /* 전체 너비 차지 */
-        gap: 15px;
-    }
-    .search-bar {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
-    .search-bar input[type="text"] {
-        max-width: none; /* 너비 제한 해제 */
-    }
-    .data-table th,
-    .data-table td {
-        padding: 12px;
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 600px) {
-    .education-plan-container {
-        margin: 20px 10px;
-        padding: 20px;
-    }
-    .education-plan-container h2 {
-        font-size: 24px;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-    }
-    .search-bar select,
-    .search-bar input[type="text"],
-    .search-bar button {
-        font-size: 14px;
-        padding: 8px 10px;
-    }
-    .data-table {
-        font-size: 13px;
-    }
-    .data-table th,
-    .data-table td {
-        padding: 10px;
-    }
-    .pagination .page-link {
-        padding: 8px 12px;
-        font-size: 13px;
-    }
+.news p{ /* '위 이야기는 실제 기사를 기반으로한 각본입니다.' 텍스트 */
+    color: rgb(163, 163, 163);
 }

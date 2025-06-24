@@ -1,156 +1,231 @@
 /* 전역 기본 설정: 모든 요소에 일괄 적용 */
 * {
-    /* 테두리, 여백 계산 방식 정리 */
     box-sizing: border-box;
-    /* 바깥 여백과 안쪽 여백 없앰 */
+    /* 모든 요소의 외부 여백(margin)을 0으로 초기화합니다. */
     margin: 0;
+    /* 모든 요소의 내부 여백(padding)을 0으로 초기화합니다. */
     padding: 0;
-    /* 전체 글꼴 설정 */
+    /* 웹 페이지의 기본 글꼴을 Arial로 설정하고, 해당 글꼴이 없으면 시스템의 기본 산세리프(sans-serif) 글꼴을 사용합니다. */
     font-family: Arial, sans-serif;
-    /* 밑줄 없애기 (링크) */
+    /* 모든 링크(<a> 태그)의 기본 밑줄을 제거합니다. */
     text-decoration: none;
 }
 
+/* body 태그의 기본 스타일 설정: 웹 페이지 전체에 적용됩니다. */
 body {
-    line-height: 1.6; /* 줄 간격 설정 */
+    /* 텍스트 줄 간격을 폰트 크기의 1.6배로 설정하여 가독성을 높입니다. */
+    line-height: 1.6;
+    /* 기본 텍스트 색상을 진한 회색(#333)으로 설정합니다. */
     color: #333;
+    /* 웹 페이지의 배경색을 연한 회색(#f8f8f8)으로 설정합니다. */
     background-color: #f8f8f8;
+    /* 기본 폰트 크기를 16픽셀로 설정합니다. */
     font-size: 16px;
 }
 
+/* 모든 제목(h1부터 h6까지) 태그의 기본 스타일 설정 */
 h1, h2, h3, h4, h5, h6 {
+    /* 제목의 줄 간격을 폰트 크기의 1.4배로 설정합니다. */
     line-height: 1.4;
+    /* 제목 아래에 글꼴 크기(em)를 기준으로 여백을 0.8배로 설정합니다. */
     margin-bottom: 0.8em;
+    /* 제목 색상을 특정 파란색(#2d5b76)으로 통일합니다. */
     color: #2d5b76;
 }
 
-/* 문단 간격 설정 */
+/* 문단(p 태그)의 스타일 설정 */
 p {
+    /* 문단 아래에 글꼴 크기(em)를 기준으로 여백을 1배로 설정합니다. */
     margin-bottom: 1em;
 }
 
-/* 리스트 마크 제거 및 여백 설정 */
+/* 비순서 목록(ul 태그)의 스타일 설정 */
 ul {
+    /* 리스트 항목의 기본 마커(점, 숫자 등)를 제거합니다. */
     list-style-type: none;
+    /* 리스트의 왼쪽 패딩을 0으로 설정하여 들여쓰기를 제거합니다. */
     padding-left: 0;
+    /* 목록 아래에 글꼴 크기(em)를 기준으로 여백을 1배로 설정합니다. */
     margin-bottom: 1em;
 }
 
+/* 리스트 항목(li 태그)의 스타일 설정 */
 ul li {
+    /* 각 리스트 항목 아래에 여백을 0.5em으로 설정합니다. */
     margin-bottom: 0.5em;
 }
 
+/* 로그인 컨테이너 스타일: 로그인 박스를 화면 중앙에 배치합니다. */
 .login-container {
+    /* Flexbox 레이아웃을 사용하여 자식 요소를 정렬합니다. */
     display: flex;
-    justify-content: center; /* 가로 가운데 정렬 */
-    align-items: center;     /* 세로 가운데 정렬 */
-    min-height: calc(100vh - 100px); /* 화면 전체 높이에서 헤더/푸터 제외 (요소의 최소 높이(min-height) 를 화면 전체 높이에서 100픽셀을 뺀 값으로 설정함) */
+    /* 주축(가로) 방향으로 자식 요소들을 가운데 정렬합니다. */
+    justify-content: center;
+    /* 교차축(세로) 방향으로 자식 요소들을 가운데 정렬합니다. */
+    align-items: center;
+    /* 최소 높이를 화면 전체 높이(100vh)에서 헤더/푸터 등의 높이(100px)를 뺀 값으로 설정하여
+       콘텐츠가 적어도 화면에 꽉 차 보이도록 합니다. */
+    min-height: calc(100vh - 100px);
+    /* 로그인 컨테이너의 배경색을 연한 회색(#f8f8f8)으로 설정합니다. */
     background-color: #f8f8f8;
+    /* 컨테이너 내부의 모든 방향에 20픽셀의 패딩을 추가합니다. */
     padding: 20px;
 }
 
+/* 로그인 박스 스타일: 로그인 폼을 담는 카드 형태의 박스입니다. */
 .login-box {
+    /* 배경색을 흰색(#ffffff)으로 설정합니다. */
     background-color: #ffffff;
+    /* 내부의 모든 방향에 40픽셀의 패딩을 추가합니다. */
     padding: 40px;
-    border-radius: 12px; /* 모서리 둥글게 */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* 그림자 효과 */
+    /* 모서리를 12픽셀 둥글게 처리합니다. */
+    border-radius: 12px;
+    /* 그림자 효과를 추가하여 입체감을 줍니다. (가로 0, 세로 8px, 번짐 25px, 색상 rgba(0,0,0,0.12)) */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    /* 너비를 100%로 설정하여 부모 컨테이너의 가용 너비를 모두 사용합니다. */
     width: 100%;
-    max-width: 400px; /* 최대 너비 제한 */
+    /* 최대 너비를 400픽셀로 제한하여 너무 넓어지는 것을 방지합니다. */
+    max-width: 400px;
+    /* 박스 내의 텍스트를 중앙 정렬합니다. */
     text-align: center;
 }
 
-/* 로그인 제목 스타일 */
+/* 로그인 제목(h2) 스타일 */
 .login-box h2 {
+    /* 폰트 크기를 28픽셀로 설정합니다. */
     font-size: 28px;
+    /* 폰트 색상을 특정 파란색(#2d5b76)으로 설정합니다. */
     color: #2d5b76;
+    /* 제목 아래에 30픽셀의 여백을 추가합니다. */
     margin-bottom: 30px;
+    /* 폰트 굵기를 700(굵게)으로 설정합니다. */
     font-weight: 700;
 }
 
-/* 입력칸 전체 스타일 */
+/* 입력칸 그룹 스타일: 라벨과 입력 필드를 묶는 컨테이너입니다. */
 .input-group {
+    /* 그룹 아래에 20픽셀의 여백을 추가합니다. */
     margin-bottom: 20px;
-    text-align: left; /* 왼쪽 정렬 */
+    /* 그룹 내의 텍스트를 왼쪽 정렬합니다. */
+    text-align: left;
 }
 
-/* 입력칸 앞에 붙는 설명글(label) */
+/* 입력칸 앞에 붙는 설명글(label) 스타일 */
 .input-group label {
-    display: block; /* 줄 바꿈 */
+    /* 블록 요소로 설정하여 항상 새 줄에서 시작하고 너비를 모두 차지합니다. */
+    display: block;
+    /* 폰트 크기를 15픽셀로 설정합니다. */
     font-size: 15px;
+    /* 폰트 색상을 중간 회색(#555)으로 설정합니다. */
     color: #555;
+    /* 라벨 아래에 8픽셀의 여백을 추가합니다. */
     margin-bottom: 8px;
+    /* 폰트 굵기를 굵게 설정합니다. */
     font-weight: bold;
 }
 
-/* 텍스트/비밀번호 입력창 디자인 */
+/* 텍스트/비밀번호 입력창(input) 디자인 */
 .input-group input[type="text"],
 .input-group input[type="password"] {
+    /* 너비를 100%로 설정하여 부모 요소의 가용 너비를 모두 사용합니다. */
     width: 100%;
+    /* 내부 패딩을 상하 12px, 좌우 15px로 설정합니다. */
     padding: 12px 15px;
+    /* 1픽셀 두께의 연한 회색(#ddd) 실선 테두리를 설정합니다. */
     border: 1px solid #ddd;
+    /* 모서리를 8픽셀 둥글게 처리합니다. */
     border-radius: 8px;
+    /* 폰트 크기를 16픽셀로 설정합니다. */
     font-size: 16px;
+    /* 폰트 색상을 진한 회색(#333)으로 설정합니다. */
     color: #333;
+    /* 클릭(포커스) 시 나타나는 기본 아웃라인을 제거합니다. */
     outline: none;
-    transition: border-color 0.2s ease; /* 클릭 시 부드럽게 테두리 색 변경 */
+    /* 테두리 색상 변경 시 0.2초 동안 부드럽게 전환되도록 애니메이션 효과를 추가합니다. */
+    transition: border-color 0.2s ease;
 }
 
-/* 입력창 클릭했을 때 테두리 색 변경 */
+/* 입력창 클릭(포커스)했을 때 테두리 색상 변경 */
 .input-group input[type="text"]:focus,
 .input-group input[type="password"]:focus {
+    /* 포커스 시 테두리 색상을 특정 파란색(#2d5b76)으로 변경합니다. */
     border-color: #2d5b76;
 }
 
 /* 로그인 버튼 스타일 */
 .login-button {
+    /* 너비를 100%로 설정하여 부모 요소의 가용 너비를 모두 사용합니다. */
     width: 100%;
+    /* 내부 패딩을 15픽셀로 설정합니다. */
     padding: 15px;
+    /* 배경색을 특정 파란색(#2d5b76)으로 설정합니다. */
     background-color: #2d5b76;
+    /* 텍스트 색상을 흰색으로 설정합니다. */
     color: white;
+    /* 테두리를 제거합니다. */
     border: none;
+    /* 모서리를 8픽셀 둥글게 처리합니다. */
     border-radius: 8px;
+    /* 폰트 크기를 18픽셀로 설정합니다. */
     font-size: 18px;
+    /* 폰트 굵기를 굵게 설정합니다. */
     font-weight: bold;
+    /* 마우스 오버 시 커서 모양을 손가락 포인터로 변경합니다. */
     cursor: pointer;
+    /* 버튼 위에 20픽셀의 여백을 추가합니다. */
     margin-top: 20px;
+    /* 배경색 변경 시 0.2초 동안 부드럽게 전환되도록 애니메이션 효과를 추가합니다. */
     transition: background-color 0.2s ease;
 }
 
-/* 비밀번호 찾기/회원가입 링크 */
+/* 비밀번호 찾기/회원가입 링크 그룹 스타일 */
 .links {
+    /* 위에 25픽셀의 여백을 추가합니다. */
     margin-top: 25px;
+    /* 폰트 크기를 14픽셀로 설정합니다. */
     font-size: 14px;
 }
 
+/* 비밀번호 찾기/회원가입 링크(a 태그) 스타일 */
 .links a {
+    /* 링크 색상을 특정 파란색(#2d5b76)으로 설정합니다. */
     color: #2d5b76;
+    /* 링크 밑줄을 제거합니다. */
     text-decoration: none;
+    /* 좌우에 8픽셀의 여백을 추가하여 링크 간 구분을 명확히 합니다. */
     margin: 0 8px;
+    /* 색상 변경 시 0.2초 동안 부드럽게 전환되도록 애니메이션 효과를 추가합니다. */
     transition: color 0.2s ease;
 }
 
 /* --- 화면이 작을 때 (모바일) 스타일 조정 --- */
+/* 화면 너비가 600픽셀 이하일 때 적용되는 미디어 쿼리입니다. */
 @media (max-width: 600px) {
+    /* 로그인 박스의 내부 패딩을 줄이고, 외부 여백을 조정합니다. */
     .login-box {
         padding: 30px 20px;
         margin: 20px;
     }
 
+    /* 로그인 제목의 폰트 크기와 아래 여백을 줄입니다. */
     .login-box h2 {
         font-size: 24px;
         margin-bottom: 20px;
     }
 
+    /* 입력 필드의 패딩과 폰트 크기를 줄입니다. */
     .input-group input {
         padding: 10px 12px;
         font-size: 15px;
     }
 
+    /* 로그인 버튼의 패딩과 폰트 크기를 줄입니다. */
     .login-button {
         padding: 12px;
         font-size: 16px;
     }
 
+    /* 링크 그룹의 폰트 크기와 위 여백을 줄입니다. */
     .links {
         font-size: 13px;
         margin-top: 20px;
@@ -159,62 +234,99 @@ ul li {
 
 /* --- 상단 헤더 (웹페이지 맨 위) --- */
 header {
+    /* 배경색을 특정 파란색(#2d5b76)으로 설정합니다. */
     background-color: #2d5b76;
+    /* 텍스트 색상을 흰색으로 설정합니다. */
     color: white;
+    /* 내부 패딩을 상하 18px, 좌우 30px로 설정합니다. */
     padding: 18px 30px;
+    /* Flexbox 레이아웃을 사용하여 자식 요소를 정렬합니다. */
     display: flex;
+    /* 자식 요소들을 양 끝으로 정렬합니다. (로고는 왼쪽, 버튼들은 오른쪽) */
     justify-content: space-between;
+    /* 자식 요소들을 세로 중앙에 정렬합니다. */
     align-items: center;
 }
 
-/* 헤더 제목 */
+/* 헤더 제목(h1) 스타일 */
 header h1 {
+    /* 폰트 크기를 30픽셀로 설정합니다. */
     font-size: 30px;
+    /* 폰트 색상을 흰색으로 설정합니다. */
     color: white;
+    /* 제목 아래 여백을 0으로 설정합니다. */
     margin-bottom: 0;
 }
 
-/* 오른쪽 상단 버튼들 */
+/* 오른쪽 상단 버튼들 그룹 스타일 */
 .top-buttons {
+    /* Flexbox 레이아웃을 사용하여 버튼들을 정렬합니다. */
     display: flex;
+    /* 버튼들 사이에 15픽셀의 간격을 줍니다. */
     gap: 15px;
+    /* 버튼들을 세로 중앙에 정렬합니다. */
     align-items: center;
 }
 
+/* 오른쪽 상단 버튼(button) 스타일 */
 .top-buttons button {
+    /* 배경색을 흰색으로 설정합니다. */
     background: white;
+    /* 텍스트 색상을 특정 파란색(#2d5b76)으로 설정합니다. */
     color: #2d5b76;
+    /* 1픽셀 두께의 연한 회색(#ccc) 실선 테두리를 설정합니다. */
     border: 1px solid #ccc;
+    /* 내부 패딩을 상하 10px, 좌우 18px로 설정합니다. */
     padding: 10px 18px;
+    /* 모서리를 5픽셀 둥글게 처리합니다. */
     border-radius: 5px;
+    /* 마우스 오버 시 커서 모양을 손가락 포인터로 변경합니다. */
     cursor: pointer;
+    /* 폰트 크기를 15픽셀로 설정합니다. */
     font-size: 15px;
 }
 
-
+/* 네비게이션 목록 항목(li) 스타일 */
+/* (참고: nav ul에 대한 스타일은 여기에 포함되지 않았지만, 보통 함께 정의됩니다.) */
 nav ul li {
+    /* 내부 패딩을 상하 18px, 좌우 25px로 설정합니다. */
     padding: 18px 25px;
+    /* 마우스 오버 시 커서 모양을 손가락 포인터로 변경합니다. */
     cursor: pointer;
+    /* 폰트 굵기를 굵게 설정합니다. */
     font-weight: bold;
+    /* 텍스트 색상을 검정색으로 설정합니다. */
     color: black;
 }
 
+/* 네비게이션 목록 내 링크(a) 스타일 */
 nav ul li a {
+    /* 링크 밑줄을 제거합니다. */
     text-decoration: none;
-    color: inherit; /* 부모 색상 따라감 */
+    /* 부모 요소(li)의 색상을 상속받도록 합니다. */
+    color: inherit;
 }
 
 /* --- 맨 아래 푸터 --- */
 .footer {
+    /* 배경색을 어두운 청회색(#4d6d83)으로 설정합니다. */
     background-color: #4d6d83;
+    /* 텍스트 색상을 흰색으로 설정합니다. */
     color: white;
+    /* 텍스트를 중앙 정렬합니다. */
     text-align: center;
+    /* 내부 패딩을 상하 30px, 좌우 20px로 설정합니다. */
     padding: 30px 20px;
+    /* 푸터 위에 60픽셀의 여백을 추가합니다. */
     margin-top: 60px;
+    /* 폰트 크기를 15픽셀로 설정합니다. */
     font-size: 15px;
+    /* 텍스트 줄 간격을 폰트 크기의 1.8배로 설정합니다. */
     line-height: 1.8;
 }
 
+/* 푸터 내 문단(p) 스타일 */
 .footer p {
+    /* 푸터 내의 모든 문단 텍스트 밑줄을 제거합니다. (이전 * 선택자와 중복될 수 있으나 명시적으로 선언) */
     text-decoration: none;
 }

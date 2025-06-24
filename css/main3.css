@@ -3,182 +3,157 @@
     box-sizing: border-box; /* 패딩과 보더가 너비/높이에 포함되도록 설정 */
     margin: 0;             /* 모든 요소의 외부 여백 초기화 */
     padding: 0;            /* 모든 요소의 내부 여백 초기화 */
-    font-family: 'Arial', 'Helvetica Neue', 'Malgun Gothic', sans-serif; /* 기본 폰트 지정: 영문 우선, 한글 대체 */
-    text-decoration: none; /* 텍스트 밑줄 제거 */
+    font-family: 'Arial', 'Helvetica Neue', 'Malgun Gothic', sans-serif; /* 기본 폰트 지정 */
+    text-decoration: none;
 }
 
 /* 웹페이지 전체 기본 스타일 */
 body {
     line-height: 1.6;      /* 줄 간격 설정 */
-    color: #333;           /* 기본 텍스트 색상 (진한 회색) */
-    background-color: #f8f8f8; /* 페이지 전체의 연한 배경색 */
-    font-size: 16px;       /* 기본 폰트 크기 설정 */
+    color: #333;
+    background-color: #f8f8f8;
+    font-size: 16px;
 }
 
 /* 제목 태그들의 기본 스타일 */
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; /* 제목 줄 간격 */
     margin-bottom: 0.8em; /* 제목 아래 여백 */
-    color: #2d5b76; /* 제목 색상 통일 (헤더 h1은 제외) */
+    color: #2d5b76;
 }
 
-/* 문단 스타일 */
 p {
     margin-bottom: 1em; /* 문단 아래 여백 */
 }
 
-/* 리스트 스타일 */
 ul {
     list-style-type: none; /* 기본 리스트 마커 제거 */
-    padding-left: 0;       /* 리스트 항목 들여쓰기 제거 */
+    padding-left: 0;
     margin-bottom: 1em;    /* 리스트 아래 여백 */
 }
 
 ul li {
-    margin-bottom: 0.5em; /* 리스트 항목 간격 */
+    margin-bottom: 0.5em;
 }
 
 /* --- 상단 헤더 --- */
 header {
-    background-color: #2d5b76; /* 헤더 배경색 */
-    color: white; /* 헤더 텍스트 색상 */
-    padding: 18px 30px; /* 헤더 내부 패딩 */
-    display: flex; /* 플렉스 레이아웃 */
-    justify-content: space-between; /* 요소 간격 조정 */
-    align-items: center; /* 요소 정렬 */
+    background-color: #2d5b76;
+    color: white;
+    padding: 18px 30px; /* 패딩 증가 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header h1 {
-    font-size: 30px; /* 헤더 제목 폰트 크기 */
+header h1 { /* 헤더 제목 폰트 크기 */
+    font-size: 30px;
     color: white; /* 헤더 제목 색상 */
-    margin-bottom: 0; /* 헤더 제목 아래 여백 제거 */
+    margin-bottom: 0; /* 헤더 h1은 자체적으로 여백 없앰 */
 }
 
-/* 상단 버튼 스타일 */
 .top-buttons {
-    display: flex; /* 플렉스 레이아웃 */
-    gap: 15px; /* 버튼 간격 */
+    display: flex;
+    gap: 15px; /* 버튼 간격 증가 */
     align-items: center; /* 버튼 정렬 */
 }
 
 .top-buttons button {
-    background: white; /* 버튼 배경색 */
-    color: #2d5b76; /* 버튼 텍스트 색상 */
-    border: 1px solid #ccc; /* 버튼 테두리 */
-    padding: 10px 18px; /* 버튼 내부 패딩 */
-    border-radius: 5px; /* 버튼 모서리 둥글게 */
-    cursor: pointer; /* 클릭 가능한 요소 표시 */
-    font-size: 15px; /* 버튼 폰트 크기 */
+    background: white;
+    color: #2d5b76;
+    border: 1px solid #ccc;
+    padding: 10px 18px; /* 버튼 패딩 증가 */
+    border-radius: 5px;
+    cursor: pointer; /* 커서 포인터는 유지합니다 (클릭 가능한 요소임을 시각적으로 보여줌) */
+    font-size: 15px;
 }
 
-/* 검색 아이콘 스타일 */
 .top-buttons .search-icon {
-    font-size: 24px; /* 아이콘 크기 */
-    cursor: pointer; /* 클릭 가능한 요소 표시 */
-    color: white; /* 아이콘 색상 */
+    font-size: 24px; /* 검색 아이콘 크기 증가 */
+    cursor: pointer; /* 커서 포인터는 유지합니다 */
+    color: white;
     margin-left: 5px; /* 버튼과 아이콘 사이 간격 */
 }
 
-/* section 내부 콘텐츠 스타일 */
-section {
-    background-color: #fcfcfc; /* 섹션 배경색 */
-    padding: 40px 50px; /* 섹션 내부 패딩 */
-    margin: 40px auto; /* 섹션 중앙 정렬 및 상하 여백 */
-    max-width: 850px; /* 섹션 최대 너비 */
-    box-shadow: 0 0 15px rgba(0,0,0,0.08); /* 섹션 그림자 */
-    border-radius: 8px; /* 섹션 모서리 둥글게 */
+/* --- 네비게이션 메뉴 --- */
+nav ul {
+    display: flex;
+    background-color: white;
+    border-top: 1px solid #eee; /* 상단 테두리 유지 */
+    border-bottom: none; /* 네비게이션 하단 밑줄 제거 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 그림자 효과 */
+    justify-content: space-around; /* 메뉴 항목을 균등하게 분배 */
 }
 
+/* section 내부 콘텐츠의 가독성 향상 스타일 */
+section {
+    background-color: #fcfcfc; /* 흰색에 가까운 배경색으로 눈의 피로 감소 */
+    padding: 40px 50px; /* 섹션 내부 여백 조정 */
+    margin: 40px auto; /* 섹션 자체를 가운데 정렬 및 상하 여백 */
+    max-width: 850px; /* 본문 최대 너비 설정 (원하는 만큼 조정 가능) */
+    box-shadow: 0 0 15px rgba(0,0,0,0.08); /* 은은한 그림자로 책 느낌 */
+    border-radius: 8px; /* 부드러운 모서리 */
+}
 /* 본제목 스타일 */
 section h1 {
-    font-family: 'Nanum Gothic', sans-serif; /* 제목 폰트 */
-    font-size: 2.2em; /* 제목 크기 */
-    font-weight: bold; /* 제목 굵게 */
-    color: #1a1a1a; /* 제목 색상 */
-    text-align: center; /* 제목 중앙 정렬 */
-    margin-top: 20px; /* 제목 상단 여백 */
-    margin-bottom: 40px; /* 제목 하단 여백 */
-    line-height: 1.3; /* 제목 줄 간격 */
+    font-family: 'Nanum Gothic', sans-serif; /* 고딕체 계열로 제목 강조 */
+    font-size: 2.2em; /* 큰 제목 크기 */
+    font-weight: bold;
+    color: #1a1a1a;
+    text-align: center;
+    margin-top: 20px; /* 상단 여백 조절 */
+    margin-bottom: 40px; /* 하단 여백 조절 */
+    line-height: 1.3;
     word-break: keep-all; /* 단어 단위 줄바꿈 */
 }
-
 /* 장 제목 스타일 */
 section h2 {
-    font-family: 'Nanum Gothic', sans-serif; /* 장 제목 폰트 */
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.5em; /* 장 제목 크기 */
-    font-weight: bold; /* 장 제목 굵게 */
-    color: #3a3a3a; /* 장 제목 색상 */
-    margin-top: 40px; /* 장 제목 상단 여백 */
-    margin-bottom: 25px; /* 장 제목 하단 여백 */
-    padding-left: 10px; /* 장 제목 들여쓰기 */
-    border-left: 4px solid #d4a974; /* 장 제목 왼쪽 포인트 라인 */
-    word-break: keep-all; /* 단어 단위 줄바꿈 */
+    font-weight: bold;
+    color: #3a3a3a;
+    margin-top: 40px; /* 상단 여백 조절 */
+    margin-bottom: 25px; /* 하단 여백 조절 */
+    padding-left: 10px;
+    border-left: 4px solid #d4a974; /* 포인트 라인 */
+    word-break: keep-all;
 }
-
 /* 문단 스타일 */
 section p {
-    line-height: 1.8; /* 문단 줄 간격 */
-    color: #2c2c2c; /* 문단 텍스트 색상 */
-    margin-bottom: 1.4em; /* 문단 하단 여백 */
-    text-align: justify; /* 문단 양쪽 정렬 */
-    text-indent: 1.5em; /* 문단 첫 줄 들여쓰기 */
-    word-break: keep-all; /* 단어 단위 줄바꿈 */
+    line-height: 1.8; /* 줄 간격 넓혀 읽기 편하게 */
+    color: #2c2c2c;
+    margin-bottom: 1.4em; /* 단락 하단 여백 */
+    text-align: justify; /* 양쪽 정렬 */
+    text-indent: 1.5em; /* 첫 줄 들여쓰기 */
+    word-break: keep-all;
 }
 
-/* 강조 텍스트 스타일 */
 section strong {
-    color: #a82e2e; /* 강조 텍스트 색상 */
-    font-weight: bold; /* 강조 텍스트 굵게 */
+    color: #a82e2e; /* 붉은 계열로 강조 */
+    font-weight: bold;
 }
 
 /* 문단 시작 들여쓰기 초기화 */
 section h2 + p {
-    text-indent: 0; /* 장 제목 바로 아래 문단 들여쓰기 제거 */
+    text-indent: 0;
 }
 
-/* 구분선 스타일 */
+/* HR (구분선) */
 section hr {
-    border: none; /* 구분선 테두리 제거 */
-    border-top: 1px solid #eee; /* 구분선 스타일 */
-    margin: 50px 0; /* 구분선 상하 여백 */
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 50px 0;
 }
-
 /* --- 푸터 --- */
 .footer {
-    background-color: #4d6d83; /* 푸터 배경색 */
-    color: white; /* 푸터 텍스트 색상 */
-    text-align: center; /* 푸터 텍스트 중앙 정렬 */
-    padding: 30px 20px; /* 푸터 내부 패딩 */
-    margin-top: 60px; /* 푸터 상단 여백 */
-    font-size: 15px; /* 푸터 폰트 크기 */
-    line-height: 1.8; /* 푸터 줄 간격 */
+    background-color: #4d6d83; /* 배경색 */
+    color: white; /* 텍스트 색상 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 30px 20px; /* 내부 패딩 */
+    margin-top: 60px; /* 상단 여백 */
+    font-size: 15px; /* 폰트 크기 */
+    line-height: 1.8; /* 줄 간격 */
 }
-
-/* 푸터 문단 스타일 */
 .footer p {
-    text-decoration: none; /* 푸터 문단 밑줄 제거 */
-}
-/* 반응형 미디어 쿼리 */
-@media (max-width: 768px) {
-    body {
-        font-size: 14px; /* 작은 화면에서 기본 폰트 크기 조정 */
-    }
-
-    header {
-        flex-direction: column; /* 헤더 요소를 세로로 배치 */
-        text-align: center; /* 텍스트 중앙 정렬 */
-    }
-
-    section {
-        padding: 20px; /* 섹션 내부 패딩 축소 */
-        margin: 20px auto; /* 섹션 여백 축소 */
-    }
-
-    section h1 {
-        font-size: 1.8em; /* 제목 크기 축소 */
-    }
-
-    section h2 {
-        font-size: 1.3em; /* 장 제목 크기 축소 */
-    }
+    text-decoration: none; /* 푸터 내 p 태그 텍스트 밑줄 제거 */
 }
