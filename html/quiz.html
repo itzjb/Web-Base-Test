@@ -7,6 +7,43 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    
+        <!-- 상단 헤더: 제목 + 로그인/회원가입 버튼 -->
+        <header>
+            <a href="../html/main.html"><h1>너였다면</h1></a>
+            <div class="top-buttons">
+            <a href="../html/login.html"><button>로그인</button></a>
+            <a href="../html/signin.html"><button>회원가입</button></a>
+            </div>
+        </header>
+
+            <!-- 네비게이션 메뉴: 5개 이상 구성 -->
+    <nav>
+        <ul>
+            <a href="javascript:void(0);" onclick="showMainPG()"><li>사건선택</li></a>
+            <a href="javascript:void(0);" onclick="showQuiz()"><li>퀴즈풀기</li></a>
+            <a href="javascript:void(0);" onclick="showCardnews()"><li>카드뉴스</li></a>
+            <a href="javascript:void(0);" onclick="showPlanTable()"><li>교육계획표</li></a>
+            <a href="javascript:void(0);" onclick="showNewssection()"><li>보도자료</li></a>
+        </ul>
+    </nav>
+
+    <section id="quiz-section">
+        <h2>퀴즈풀기</h2>
+        <p>아래의 퀴즈를 풀어보세요!</p>
+        <form id="quiz-form">
+            <label for="answer">질문: 2014년 4월 16일, 세월호 사건에서 '전원 구조' 소식이 전해진 시간은?</label><br>
+            <input type="text" id="answer" name="answer" required>
+            <button type="submit">제출</button>
+        </form>
+        <div id="result"></div>
+    </section>
+
+    <!-- 푸터 영역: 저작권, 연락처, 개인정보 처리방침 등 조건 충족 -->
+    <footer class="footer">
+        <p>개인정보처리방침 고객관리안내문 이용약관 이메일 수집 거부 </p>
+        <p>너였다면 인터넷 교육 회사  |  사용자등록번호 000-00-0000  |  대표이사 000</p>
+        <p>주소 00000 서울시 00구 00포 00 (너였다면빌딩)  |  대표번호 0000-0000</p>
+        <p>@ sjduTekaus1148</p>
+    </footer>
 </body>
 </html>
