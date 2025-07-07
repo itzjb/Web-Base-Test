@@ -10,7 +10,7 @@ document.getElementById('submit-quiz').addEventListener('click', function () {
         return;
     }
 
-    const correctAnswer = '3';
+    const correctAnswer = '4';
     if (selectedAnswer.value === correctAnswer) {
         resultElement.textContent = '정답입니다! 🎉';
         resultElement.style.color = 'green';
@@ -30,5 +30,5 @@ document.getElementById('submit-quiz').addEventListener('click', function () {
 
 // 다음 퀴즈 페이지 이동
 document.getElementById('next-quiz').addEventListener('click', function () {
-    window.location.href = 'quiz2.html';
+    window.location.href = 'quiz3.html';
 });
