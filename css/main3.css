@@ -179,3 +179,32 @@ nav ul li a {
     text-decoration: none; /* 링크 밑줄 제거 */
     color: inherit; /* 부모 색상 상속 */
 }
+
+.data-table tr {
+    padding: 0px;
+}
+
+/* --- 카드뉴스 섹션에 추가된 스타일 (이전 답변에서 추가된 부분) --- */
+.card .author-info {
+    font-size: 0.85em; /* 글자 크기를 살짝 작게 하여 부가 정보임을 강조 */
+    color: #666;      /* 색상을 약간 연하게 하여 본문과 구분 */
+    margin-top: 5px;   /* 제목과의 간격 조절 */
+    margin-bottom: 0;  /* 아래쪽 여백 제거 (다음 요소와 붙게) */
+    text-align: center; /* 카드 내에서 중앙 정렬 */
+    white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 강제 (중요!) */
+    overflow: hidden;    /* 넘치는 텍스트 숨기기 */
+    text-overflow: ellipsis; /* 숨겨진 텍스트를 '...'로 표시 */
+    padding: 0 5px; /* 양옆에 약간의 패딩을 주어 텍스트가 카드 가장자리에 너무 붙지 않게 */
+}
+
+.data-table td {
+    white-space: nowrap; /* 텍스트가 줄 바꿈되지 않도록 강제 */
+    overflow: hidden;    /* 셀 너비를 넘어가는 텍스트 숨김 */
+    text-overflow: ellipsis; /* 숨겨진 텍스트를 "..."으로 표시 */
+}
+
+.data-table th { /* 헤더도 한 줄로 유지하고 싶다면 이 코드도 중요 */
+    white-space: nowrap; /* 헤더 텍스트가 줄 바꿈되지 않도록 강제 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
