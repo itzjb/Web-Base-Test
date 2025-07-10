@@ -725,8 +725,8 @@ hr {
 .quiz-box {
     height: 24em;
     width: 60em;
-    border: 1px solid black;
     margin: auto;
+    box-shadow: 3px 3px 5px black;
 }
 
 .quiz-box h1 {
@@ -735,7 +735,7 @@ hr {
 }
 .quiz-box p {
     font-size: 15px;
-    color: #2d5b76;
+    color: black;
 }
 
 #quizstbtn {
@@ -744,5 +744,10 @@ hr {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration-skip: ;
+    text-decoration: none;
+
+}
+#quizstbtn a {
+    color: white;
+    font-weight: bold;
 }
