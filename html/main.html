@@ -202,18 +202,80 @@
             <button id="quizstbtn"><a href="../html/quiz.html">퀴즈 풀기</a></button>
         </div>
     </section>
-
-    <section id="news-section" style="display: none;"> <!-- 기본적으로 보이지 않게 하고, 위 메뉴(보도자료) 선택 시에만 보이도록 함 -->
-        <h1>보도자료</h1>
-        <div class="news-container">
-            <div class="news-item">
-                <h2>뉴스 제목</h2>
-                <p>뉴스 내용</p>
-            </div>
+    <section id="news-section" style="display: none;"> 
+        <!-- <!- 기본적으로 보이지 않게 하고, 위 메뉴(교육계획표) 선택 시에만 보이도록 함 -->
+        <div class="education-plan-container">
+            <h2>보도 | 설명자료</h2>
+        
+            <div class="table-controls">
+                <div class="search-bar">
+                    <select id="searchCategory">
+                        <option value="제목">제목</option>
+                        <option value="내용">내용</option>
+                        <option value="작성자">작성자</option>
+                    </select>
+                    <input type="text" id="searchInput" placeholder="검색어를 입력하세요">
+                    <button id="searchButton">검색</button>
+                </div>
+        </div>
+        
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>등록자</th>
+                    <th>등록일</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>5</td>
+                    <td>[교육부 05-23(금)] 제13회 디지털 인재양성 100인 토론회 개최</td>
+                    <td>행정안</td>
+                    <td>2024-05-15</td>
+                    <td>5657</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>[교육부 05-22(목)] 2025년 디지털새싹 이렇게 운영됩니다</td>
+                    <td>정책부</td>
+                    <td>2024-04-15</td>
+                    <td>10456</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>[(대통령직속국가인공지능위원회) 05-20(화)] 이주호 대통령 권한대행 AI 활용 1등 국가 도약을 위한 'AI 현장 대화' 개최</td>
+                    <td>교육부</td>
+                    <td>2023-09-18</td>
+                    <td>11246</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>[교육부 03-18(화)] 인공지능(AI) 단추 플러스로 똑똑하게 공부해요!</td>
+                    <td>강성화</td>
+                    <td>2023-02-23</td>
+                    <td>25638</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>[교육부 12-04(수)] 반도체 인재양성을 위한 산학협력 간담회 개최</td>
+                    <td>권혁율</td>
+                    <td>2022-09-15</td>
+                    <td>27970</td>
+                </tr>
+                </tbody>
+        </table>
+    
+        <div class="pagination">
+            <a href="#" class="page-link">&lt;</a>
+            <a href="#" class="page-link active">1</a>
+            <a href="#" class="page-link">2</a>
+            <a href="#" class="page-link">3</a>
+            <a href="#" class="page-link">&gt;</a>
         </div>
     </section>
-
-
     <!-- 푸터 영역: 저작권, 연락처, 개인정보 처리방침 등 조건 충족 -->
     <footer class="footer">
         <p>개인정보처리방침 고객관리안내문 이용약관 이메일 수집 거부 </p>
