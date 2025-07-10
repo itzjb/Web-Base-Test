@@ -330,3 +330,25 @@ nav ul li a {
     /* 푸터 내의 모든 문단 텍스트 밑줄을 제거합니다. (이전 * 선택자와 중복될 수 있으나 명시적으로 선언) */
     text-decoration: none;
 }
+
+/* --- 네비게이션 메뉴 --- */
+nav ul {
+    display: flex; /* Flexbox 사용 */
+    background-color: white; /* 배경색 */
+    border-top: 1px solid #eee; /* 상단 테두리 */
+    border-bottom: none; /* 하단 테두리 없음 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 그림자 효과 */
+    justify-content: space-around; /* 메뉴 항목 균등 분배 */
+}
+
+nav ul li {
+    padding: 18px 25px; /* 내부 패딩 */
+    cursor: pointer; /* 포인터 커서 */
+    font-weight: bold; /* 폰트 굵게 */
+    color: black; /* 텍스트 색상 */
+}
+
+nav ul li a {
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 부모 색상 상속 */
+}

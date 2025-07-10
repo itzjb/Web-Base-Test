@@ -15,6 +15,13 @@
         <span class="close-btn" onclick="closePopup()">x</span>
         <h2>공지사항</h2>
         <p>이 사이트는 학습용으로 제작되었습니다.</p>
+        <div class="popup-options">
+            <label class="hide-option">
+                <input type="checkbox" id="hideForDay">
+                <span>하루동안 안보기</span>
+            </label>
+            <button class="popup-close-btn" onclick="closePopupForDay()">닫기</button>
+        </div>
         </div>
     </div>
 
@@ -31,10 +38,10 @@
     <nav>
         <ul>
             <a href="javascript:void(0);" onclick="showMainPG()"><li>사건선택</li></a>
-            <a href="#"><li>퀴즈풀기</li></a>
+            <a href="javascript:void(0);" onclick="showQuiz()"><li>퀴즈풀기</li></a>
             <a href="javascript:void(0);" onclick="showCardnews()"><li>카드뉴스</li></a>
             <a href="javascript:void(0);" onclick="showPlanTable()"><li>교육계획표</li></a>
-            <a href="#"><li>보도자료</li></a>
+            <a href="javascript:void(0);" onclick="showNewssection()"><li>보도자료</li></a>
         </ul>
     </nav>
 
@@ -182,6 +189,33 @@
         </div>
     </section>
 
+    <section id="quiz-section" style="display: none;"> <!-- 기본적으로 보이지 않게 하고, 위 메뉴(퀴즈풀기) 선택 시에만 보이도록 함 -->
+        <h1>퀴즈풀기</h1>
+        <div class="quiz-container">
+            <div class="quiz-question">
+                <h2>문제</h2>
+                <p>문제 내용</p>
+            </div>
+            <div class="quiz-options">
+                <button class="quiz-option">옵션 1</button>
+                <button class="quiz-option">옵션 2</button>
+                <button class="quiz-option">옵션 3</button>
+                <button class="quiz-option">옵션 4</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="news-section" style="display: none;"> <!-- 기본적으로 보이지 않게 하고, 위 메뉴(보도자료) 선택 시에만 보이도록 함 -->
+        <h1>보도자료</h1>
+        <div class="news-container">
+            <div class="news-item">
+                <h2>뉴스 제목</h2>
+                <p>뉴스 내용</p>
+            </div>
+        </div>
+    </section>
+
+
     <!-- 푸터 영역: 저작권, 연락처, 개인정보 처리방침 등 조건 충족 -->
     <footer class="footer">
         <p>개인정보처리방침 고객관리안내문 이용약관 이메일 수집 거부 </p>
@@ -190,5 +224,20 @@
         <p>@ sjduTekaus1148</p>
     </footer>
     <script src="../js/main.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.replace('#', '');
+            if (hash) {
+            document.querySelectorAll('section').forEach(sec => {
+                sec.style.display = 'none';
+            });
+            const target = document.getElementById(hash);
+            if (target) {
+                target.style.display = 'block';
+            }
+            }
+        });
+    </script>
+    
 </body>
 </html>
