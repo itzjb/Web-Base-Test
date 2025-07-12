@@ -715,42 +715,86 @@ hr {
     color: rgb(163, 163, 163);
 }
 
+/* quiz-section 내부 스타일 조정 */
 #quiz-section {
-    background-color: #ffffff; /* 배경색 */
-    border: 1px solid #ddd; /* 테두리 */
-    margin: 40px auto; /* 상하 여백, 좌우 자동 (중앙 정렬) */
-    max-width: 1000px; /* 최대 너비 */
-    padding: 50px; /* 내부 패딩 */
-    border-radius: 12px; /* 모서리 둥글게 */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* 그림자 효과 */
+    display: flex; /* Flexbox를 사용하여 내부 요소를 중앙에 배치 */
+    flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    height: 60vh; /* 뷰포트 높이의 60%를 사용하여 충분한 공간 확보 */
+    /* 기존 스타일 유지: */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     text-align: center; /* 텍스트 중앙 정렬 */
 }
 
 .quiz-box {
-    height: 24em;
-    width: 60em;
+    /* 기존 height와 width를 제거하여 내용에 맞게 크기 조정 */
+    /* height: 24em; */
+    /* width: 60em; */
     margin: auto;
+    display: flex; /* quiz-box 내부 요소들을 flexbox로 관리 */
+    flex-direction: column; /* 세로로 정렬 */
+    justify-content: center; /* 세로 중앙 정렬 */
+    align-items: center; /* 가로 중앙 정렬 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    padding: 20px; /* 내부 여백 추가 */
 }
 
 .quiz-box h1 {
-    font-size: 30px;
+    font-size: 2.5em; /* 글자 크기를 5em으로 더 키움 */
     color: #2d5b76;
+    margin-bottom: 0.5em; /* 제목 아래 여백 추가 */
+    line-height: 1.2; /* 줄 간격 조정 */
 }
+
 .quiz-box p {
-    font-size: 15px;
+    font-size: 1.4em; /* 설명 텍스트 크기 키움 */
     color: black;
+    margin-bottom: 1.5em; /* 문단 아래 여백 추가 */
+    line-height: 1.6; /* 줄 간격 조정 */
 }
 
 #quizstbtn {
     background-color: #2d5b76;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 30px; /* 버튼 패딩 키움 */
+    border-radius: 8px; /* 버튼 모서리 둥글게 */
     cursor: pointer;
     text-decoration: none;
-
+    font-size: 1.2em; /* 버튼 글자 크기 키움 */
+    margin-top: 20px; /* 버튼 위쪽 여백 추가 */
 }
+
 #quizstbtn a {
     color: white;
     font-weight: bold;
+}
+
+/* 추가적으로, quiz-box 내 p 태그에 대한 반응형 조절 */
+@media (max-width: 900px) {
+    .quiz-box h1 {
+        font-size: 3.5em; /* 작은 화면에서 제목 크기 조절 */
+    }
+    .quiz-box p {
+        font-size: 1.2em; /* 작은 화면에서 문단 크기 조절 */
+    }
+}
+
+@media (max-width: 600px) {
+    .quiz-box h1 {
+        font-size: 2.5em; /* 더 작은 화면에서 제목 크기 조절 */
+    }
+    .quiz-box p {
+        font-size: 1em; /* 더 작은 화면에서 문단 크기 조절 */
+    }
+    #quizstbtn {
+        padding: 12px 25px; /* 버튼 패딩 조절 */
+        font-size: 1em; /* 버튼 글자 크기 조절 */
+    }
 }
