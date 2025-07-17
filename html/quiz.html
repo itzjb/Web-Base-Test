@@ -31,12 +31,18 @@
     <section id="quiz-section">
         <div class="quiz-boxs">
             <h3>1. 가짜뉴스를 가장 잘 구별하는 방법은 무엇인가요?</h3>
-            <li>① 뉴스 제목만 보고 판단한다</li>
-            <li>② 친구가 보냈으니 무조건 믿는다</li>
-            <li>③ 출처가 어디인지 확인하고, 다른 정보와 비교해본다</li>
-            <li>④ 내용이 충격적이면 바로 공유한다</li>
+            <ul>
+                <li><input type="radio" name="quiz1" value="1"> ① 뉴스 제목만 보고 판단한다</li>
+                <li><input type="radio" name="quiz1" value="2"> ② 친구가 보냈으니 무조건 믿는다</li>
+                <li><input type="radio" name="quiz1" value="3"> ③ 출처가 어디인지 확인하고, 다른 정보와 비교해본다</li>
+                <li><input type="radio" name="quiz1" value="4"> ④ 내용이 충격적이면 바로 공유한다</li>
+            </ul>
+            <button id="submit-quiz">제출</button>
+            <p id="quiz-result"></p>
         </div>
     </section>
+
+    <script src="../js/quiz.js"></script>
 
     <!-- 푸터 영역: 저작권, 연락처, 개인정보 처리방침 등 조건 충족 -->
     <footer class="footer">

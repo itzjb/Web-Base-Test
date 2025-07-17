@@ -1,3 +1,15 @@
 .quiz-boxs {
     text-align-last: left;
 }
+#quiz-result {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#submit-quiz {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
