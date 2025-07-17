@@ -174,8 +174,16 @@ nav ul li a {
     justify-content: center; /* 카드 수평 중앙 정렬 */
 }
 
-.card {
+/* .card를 감싸는 .card-link 스타일 */
+.card-link {
     width: calc((100% - 60px) / 3); /* 3열 카드 너비 계산 */
+    text-decoration: none; /* 링크 밑줄 제거 */
+    color: inherit; /* 부모 색상 상속 */
+    display: flex; /* flex 컨테이너로 설정하여 내부 .card가 flex 아이템으로 동작하도록 함 */
+}
+
+.card {
+    /* width: calc((100% - 60px) / 3); */ /* 이전에 .card에 있던 너비는 .card-link로 이동 */
     border: 1px solid #eee; /* 테두리 */
     border-radius: 12px; /* 모서리 둥글게 */
     overflow: hidden; /* 내용 넘칠 경우 숨김 */
@@ -183,6 +191,7 @@ nav ul li a {
     box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
     display: flex; /* Flexbox 사용 */
     flex-direction: column; /* 자식 요소 세로 정렬 */
+    width: 100%; /* .card-link의 너비를 100% 차지 */
 }
 
 .card img {
@@ -503,7 +512,7 @@ hr {
         margin: 30px 25px; /* 상하 30px, 좌우 25px 마진 */
         padding: 40px; /* 내부 패딩 */
     }
-    .card {
+    .card-link { /* .card가 아닌 .card-link에 너비 설정 */
         width: calc((100% - 30px) / 2); /* 2열 카드 너비 */
     }
 }
@@ -552,7 +561,7 @@ hr {
         font-size: 30px; /* 폰트 크기 */
         margin-bottom: 35px; /* 하단 여백 */
     }
-    .card {
+    .card-link { /* .card가 아닌 .card-link에 너비 설정 */
         width: 100%; /* 1열 */
     }
     .card img {
@@ -747,7 +756,7 @@ hr {
 }
 
 .quiz-box h1 {
-    font-size: 2.5em; /* 글자 크기를 5em으로 더 키움 */
+    font-size: 4.5em; /* 글자 크기를 4.5em으로 키움 */
     color: #2d5b76;
     margin-bottom: 0.5em; /* 제목 아래 여백 추가 */
     line-height: 1.2; /* 줄 간격 조정 */
@@ -797,4 +806,13 @@ hr {
         padding: 12px 25px; /* 버튼 패딩 조절 */
         font-size: 1em; /* 버튼 글자 크기 조절 */
     }
+}
+
+
+.card a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
 }
