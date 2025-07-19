@@ -1,6 +1,6 @@
 document.getElementById('submit-quiz').addEventListener('click', function () {
     const submitBtn = document.getElementById('submit-quiz');
-    const selectedAnswer = document.querySelector('input[name="quiz1"]:checked');
+    const selectedAnswer = document.querySelector('input[name="quiz2"]:checked'); // 수정된 부분
     const resultElement = document.getElementById('quiz-result');
     const nextQuizButton = document.getElementById('next-quiz');
 
