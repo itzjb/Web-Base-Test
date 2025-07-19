@@ -816,3 +816,13 @@ hr {
     text-decoration: none;
     color: inherit;
 }
+
+.data-table .table-link {
+    color: inherit; /* 부모 요소의 텍스트 색상을 상속 (보통 검은색) */
+    text-decoration: none; /* 링크 밑줄 제거 */
+}
+
+.data-table .table-link:hover {
+    text-decoration: underline; /* 마우스 오버 시 밑줄 표시 */
+    color: #2d5b76; /* 마우스 오버 시 색상 변경 */
+}
