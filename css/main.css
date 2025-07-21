@@ -825,5 +825,4 @@ hr {
 .data-table .table-link:hover {
     text-decoration: underline; /* 마우스 오버 시 밑줄 표시 */
     color: #2d5b76; /* 마우스 오버 시 색상 변경 */
-    background-color: #1e4a5f;
 }
