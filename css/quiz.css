@@ -15,9 +15,33 @@
 }
 
 #next-quiz {
-    display: none; /* 기본적으로 숨김 */
-    margin-top: 10px;
-    padding: 10px 20px;
-    font-size: 1em;
+    background-color: #2d5b76;
+    border: none;
+    padding: 15px 30px; /* 버튼 패딩 키움 */
+    border-radius: 8px; /* 버튼 모서리 둥글게 */
     cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em; /* 버튼 글자 크기 키움 */
+    margin-top: 20px; /* 버튼 위쪽 여백 추가 */
+}
+
+#next-quiz a {
+    color: white;
+    font-weight: bold;
+}
+
+#submit-quiz {
+    background-color: #2d5b76;
+    border: none;
+    padding: 15px 30px; /* 버튼 패딩 키움 */
+    border-radius: 8px; /* 버튼 모서리 둥글게 */
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em; /* 버튼 글자 크기 키움 */
+    margin-top: 20px; /* 버튼 위쪽 여백 추가 */
+}
+
+#submit-quiz a {
+    color: white;
+    font-weight: bold;
 }
